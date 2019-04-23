@@ -609,19 +609,14 @@ document.addEventListener("DOMContentLoaded", e => {
 		$sliderMorePhoto.on('init', slick => {
 
 		}).slick({
-			slidesToShow: 3,
+			slidesToShow: 2,
 			slidesToScroll: 1,
 			focusOnSelect: true,
 			asNavFor: $sliderDetailMain,
+			swipe: false,
 			arrows: true,
 			infinite:false,
 			responsive: [
-				{
-					breakpoint: 1000,
-					settings: {
-						slidesToShow: 2,
-					}
-				},
 				{
 					breakpoint: 660,
 					settings: {
