@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Вакансии
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		header.head
+			.wrapper
+				.head__wrap
+					.head__logo
+						a.logo(href="#")
+							img(src="img/logo.png" srcset="img/logo@2x.png 2x, img/logo@3x.png 3x")
+							img(src="img/logo-inner.png", alt="")
+					.head__phone
+						a(href="tel: 88006000706") 8 800 600 07 06
+					nav.head__menu
+						ul.head__menu-list 
+							li.head__menu-item
+								.head__menu-item-burger
+								a(href="#").head__menu-link Кухни
+								.submenu
+									.submenu__item
+										a.submenu__link(href="#") По стилям
+									.submenu__item
+										a.submenu__link(href="#") По коллекции
+
+							li.head__menu-item
+								a(href="#").head__menu-link О компании
+							li.head__menu-item
+								a(href="#").head__menu-link Покупателям
+							li.head__menu-item
+								a(href="#").head__menu-link Сотрудничество
+							li.head__menu-item
+								a(href="#").head__menu-link Контакты
+
+					.head__burger
+						.burger
+							span
+		main#content
+			.main-content
+				section.intro__cont
+					.intro-bg
+						.intro-bg__text Mossman
+					.wrapper--min
+						.intro
+							.intro-title Вакансии
+							.intro-text
+								.text-page
+									p Фабрика Mossman активно развивает свою<br> сеть салонов по России, в связи с чем в компании<br> открыто множество вакансий по всей стране
+
+
+				section.vacancies-cont
+					.wrapper--min
+						.vacancies
+							.vacancies__cities
+								.cities__item.active
+									a(href="#") Вакансии в г. Чебоксары
+								.cities__item
+									a(href="#") Вакансии в г. Санкт-Петербург
+
+							.vacancies__list
+								.vacancies__item
+									.vacancies__top Дизайнер-консультант
+									.vacancies__info-cont
+										.vacancies__info
+											.vacancies__info-text
+												.text-page
+													p Обязанности:
+													ul
+														li установление позитивного контакта с клиентами салона
+														li выявление рациональных и эмоциональных потребностей
+														li согласование сроков, бюджетов, деталей проекта
+														li разработка дизайн-проектов в 3D — визуализаторе
+														li презентация проекта, компании, салона, торговой марки, себя, как специалиста
+														li работа с сомнениями и возражениями клиента
+														li заключение договоров, сопровождение покупки
+														li активные продажи
+														li работа со сторонними дизайнерами
+													p Требования:
+													ul
+														li искреннее желание и готовность работать в продажах, опыт в этой сфере
+														li развитые коммуникативные навыки
+														li высокий уровень эмоционального интеллекта
+														li нацеленность на результат и развитие
+														li командный игрок
+														li профильное образование
+														li опыт работы в 3 CAD — как преимущество
+													p Условия:
+													ul
+														li оформление по ТК РФ
+														li конкурентный уровень вознаграждения
+														li качественный, востребованный продукт
+														li график работы 5\2
+														li работа в команде профессионалов
+														li возможности для роста и развития 
+
+
+											.vacancies__info-aside
+												.vacancies-aside
+													.vacancies-aside__top Вакансия на <a href="#">hh</a>
+													.vacancies-aside__info
+														.vacancies-aside__label Уровень заработной платы
+														.vacancies-aside__text От 35 000 до 90 000 руб. До вычета ндфл
+														.vacancies-aside__label Требуемый опыт работы
+														.vacancies-aside__text 1-3 года
+														.vacancies-aside__label Занятость
+														.vacancies-aside__text Полная занятость, полный день
+													.vacancies-aside__bot
+														a(href="#").btn Отправить резюме
+								.vacancies__item
+									.vacancies__top Дизайнер
+									.vacancies__info-cont
+										.vacancies__info
+											.vacancies__info-text
+												.text-page
+													p Обязанности:
+													ul
+														li установление позитивного контакта с клиентами салона
+														li выявление рациональных и эмоциональных потребностей
+														li согласование сроков, бюджетов, деталей проекта
+														li разработка дизайн-проектов в 3D — визуализаторе
+														li презентация проекта, компании, салона, торговой марки, себя, как специалиста
+														li работа с сомнениями и возражениями клиента
+														li заключение договоров, сопровождение покупки
+														li активные продажи
+														li работа со сторонними дизайнерами
+													p Требования:
+													ul
+														li искреннее желание и готовность работать в продажах, опыт в этой сфере
+														li развитые коммуникативные навыки
+														li высокий уровень эмоционального интеллекта
+														li нацеленность на результат и развитие
+														li командный игрок
+														li профильное образование
+														li опыт работы в 3 CAD — как преимущество
+													p Условия:
+													ul
+														li оформление по ТК РФ
+														li конкурентный уровень вознаграждения
+														li качественный, востребованный продукт
+														li график работы 5\2
+														li работа в команде профессионалов
+														li возможности для роста и развития 
+
+
+											.vacancies__info-aside
+												.vacancies-aside
+													.vacancies-aside__top Вакансия на <a href="#">hh</a>
+													.vacancies-aside__info
+														.vacancies-aside__label Уровень заработной платы
+														.vacancies-aside__text От 35 000 до 90 000 руб. До вычета ндфл
+														.vacancies-aside__label Требуемый опыт работы
+														.vacancies-aside__text 1-3 года
+														.vacancies-aside__label Занятость
+														.vacancies-aside__text Полная занятость, полный день
+													.vacancies-aside__bot
+														a(href="#").btn Отправить резюме
+
+
+									
+
+
+
+
+
+
+
+
+
+									
+
+
+
+
+
+
+			
+		include inc/footer.pug
+		include inc/scripts.pug

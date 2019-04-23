@@ -1,0 +1,94 @@
+.news
+	
+	&__item
+		position: relative
+		display: flex
+		align-items: center
+
+		&:hover 
+			.news__item
+				&-title
+					color: var(--mainColor)
+
+				&:after
+					transform: translateX(-5px)
+
+		&:after
+			content: ''
+			position: absolute
+			top: calc(50% - 5px)
+			right: 0
+			size: 12px 9px
+			background: url('../img/ico-arrow.svg') no-repeat center
+			transition: transform .3s ease
+
+
+		&:not(:first-child)
+			margin-top: 30px
+
+		&-img
+			flex: none
+			margin-right: 70px
+
+			img 
+				display: block
+
+		&-title 
+			font-size: rem(24)
+			font-weight: bold
+			letter-spacing: .02em
+			margin-bottom: 20px
+			transition: color .3s ease
+
+		&-text 
+			color: 666666
+
+		&-info 
+			max-width: 490px
+
+@media screen and (max-width: 1500px)
+
+	.news__item
+		&-img
+			margin-right: 45px
+
+		&-title
+			line-height: 1.3
+			margin-bottom: 15px
+
+
+@media screen and (max-width: 1200px)
+
+	.news__item-img
+		margin-right: 30px
+
+
+@media screen and (max-width: 1000px)
+	
+	.news__item
+		padding-right: 30px
+
+		&-img
+			max-width: 250px
+
+		&-title
+			font-size: 1.2rem
+			margin-bottom: 10px
+
+
+@media screen and (max-width: 667px)
+
+	.news__item
+		flex-direction: column
+		align-items: flex-start
+		padding: 0
+
+		&:after 
+			display: none
+
+		&-img
+			max-width: 100%
+			margin-bottom: 20px
+
+		
+

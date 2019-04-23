@@ -1,0 +1,139 @@
+@keyframes opacity
+	from
+		opacity: 0
+	to
+		opacity: 1
+
+.catalog
+	&__list
+		display: flex 
+		flex-wrap: wrap
+		margin: 0 0 -50px -6px
+
+	&__item 
+		width: calc((100% - 6px * 5) / 5)
+		margin: 0 0 50px 6px
+		opacity: 0
+		animation: opacity .3s forwards
+		
+
+
+		&:hover
+
+			.catalog__item-title
+				color: var(--mainColor)
+
+				&:after
+					transform: translate3d(-5px,0,0)
+	
+
+		&-img
+			position: relative
+			
+			margin-bottom: 35px
+
+			img 
+				display: block
+
+				&:before 
+					content: ''
+					position: absolute
+					display: block
+					top: 0
+					right: 0
+					bottom: 0
+					left: 0
+					background: url('../img/load.svg') no-repeat center
+
+		&-title 
+			font-size: rem(24)
+			font-weight: bold
+			margin-bottom: 7px
+			display: inline-block
+			line-height: 1
+			letter-spacing: .02em
+			display: flex 
+			align-items: center
+			transition: color .3s ease
+
+			&:after
+				content: ''
+				display: inline-block
+				size: 12px 9px
+				background: url('../img/ico-arrow.svg') no-repeat center
+				margin-left: 25px
+				transition: transform .3s ease
+
+		&-price 
+			font-size: rem(14)
+			line-height: 1.5
+			margin-top: 10px
+
+		&-label
+			size: 40px
+			border-radius: 50% 
+			color: #fff
+			font-size: rem(12)
+			line-height: 40px
+			text-transform: uppercase
+			text-align: center
+
+			&:not(:first-child)
+				margin-top: 5px
+			
+			
+			&-list
+				position: absolute
+				top: 40px
+				right: 35px
+				bottom: 0
+				width: 40px
+				z-index: 10
+
+		.hit 
+			background: #d41a3b
+
+@media screen and (max-width: 1500px)
+	.catalog
+		&__item
+			&-img
+				margin-bottom: 20px
+
+			&-title
+				font-size: 1.2rem
+
+
+@media screen and (max-width: 1000px)
+	.catalog
+		&__item
+			width: calc((100% - 6px * 3) / 3)
+
+			&-img
+				margin-bottom: 15px
+
+			&-title
+				font-size: 1rem
+
+@media screen and (max-width: 667px)
+
+	.catalog
+		&__list
+			margin: 0 0 -25px -6px
+			
+		&__item
+			width: 100%
+			margin: 0 0 25px 6px
+
+
+@media screen and (max-width: 370px)
+
+	.catalog__item
+		width: 100%
+
+	.top__links
+		flex-direction: column
+
+	.top__link
+		&:not(:first-child)
+			margin-top: 5px
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Советы эксперта
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		header.head
+			.wrapper
+				.head__wrap
+					.head__logo
+						a.logo(href="#")
+							img(src="img/logo.png" srcset="img/logo@2x.png 2x, img/logo@3x.png 3x")
+							img(src="img/logo-inner.png", alt="")
+					.head__phone
+						a(href="tel: 88006000706") 8 800 600 07 06
+					nav.head__menu
+						ul.head__menu-list 
+							li.head__menu-item
+								.head__menu-item-burger
+								a(href="#").head__menu-link Кухни
+								.submenu
+									.submenu__item
+										a.submenu__link(href="#") По стилям
+									.submenu__item
+										a.submenu__link(href="#") По коллекции
+
+							li.head__menu-item
+								a(href="#").head__menu-link О компании
+							li.head__menu-item
+								a(href="#").head__menu-link Покупателям
+							li.head__menu-item
+								a(href="#").head__menu-link Сотрудничество
+							li.head__menu-item
+								a(href="#").head__menu-link Контакты
+
+					.head__burger
+						.burger
+							span
+		main#content
+			.main-content
+				.title-block__cont
+					.wrapper
+						.title-block
+							.title-block__crumbs
+								.bread-crumbs
+									a.bread-crumbs__link(href='#') О компании
+									span.bread-crumbs__this 
+							.title-block__title
+								h1 Производство
+
+
+				section.production-cont
+					.wrapper--min
+						.production
+							.production__list
+								each info, i in [{title:"1997", text: "С 1997 года, как традиционное предприятие, MOSSMAN начинает производство фасадов из массива ценных пород древесины. Производственные мощности на начальном этапе были 1000 кв.м"}, {title: "Новый цех", text: "Следующим этапом развития послужило строительство нового цехa для производства фасадов из МДФ"}, {title: "Расширение производства", text: "Многочисленные инновации и постоянное целенаправленное расширение дилерской сети обусловили резкое увеличение объема продаж в 2009 году, что в свою очередь позволило расширить производственные мощности и создать стратегию развития на годы вперед"}, {title: "Создание бренда", text: "Таким образом в 2015 году учредителями фабрики было принято решение о создании бренда кухонной мебели Mossman, который включает полный цикл производства: изготовление каркасов из ЛДСП, производство фасадов из массива, МДФ и шпона, и продажа сопутствующей фурнитуры"}, {title: "Высокое качество продукта", text: "Сегодня фабрика располагается на площади более 12 000 кв. м., и на основе постоянных инвестиций в производство, MOSSMAN может гарантировать высококачественное и быстрое изготовление конкурентноспособного продукта"}]
+									.production__item
+										.production__item-ico
+											span 
+												include ../img/ico-mossman.svg
+										.production__item-info
+											.production__item-title=info.title
+											.production__item-text=info.text
+									
+
+
+
+
+
+
+			
+		include inc/footer.pug
+		include inc/scripts.pug

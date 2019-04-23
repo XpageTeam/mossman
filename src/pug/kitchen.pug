@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Кухни
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		header.head
+			.wrapper
+				.head__wrap
+					.head__logo
+						a.logo(href="#")
+							img(src="img/logo.png" srcset="img/logo@2x.png 2x, img/logo@3x.png 3x")
+							img(src="img/logo-inner.png", alt="")
+					.head__phone
+						a(href="tel: 88006000706") 8 800 600 07 06
+					nav.head__menu
+						ul.head__menu-list 
+							li.head__menu-item
+								.head__menu-item-burger
+								a(href="#").head__menu-link Кухни
+								.submenu
+									.submenu__item
+										a.submenu__link(href="#") По стилям
+									.submenu__item
+										a.submenu__link(href="#") По коллекции
+
+							li.head__menu-item
+								a(href="#").head__menu-link О компании
+							li.head__menu-item
+								a(href="#").head__menu-link Покупателям
+							li.head__menu-item
+								a(href="#").head__menu-link Сотрудничество
+							li.head__menu-item
+								a(href="#").head__menu-link Контакты
+
+					.head__burger
+						.burger
+							span
+		main#content
+			.main-content
+				section.top-cont
+					.wrapper--min
+						.top
+							.top__links
+								.top__link(data-count="8")
+									a(href="#" ).active Коллекции
+								.top__link(data-count="4")
+									a(href="#" ) Стили
+
+
+				section.kitchen-style__cont
+					.wrapper--big
+						.kitchen-style
+							.kitchen-style__list
+								each info, i in [{title: "Классика", text: "Стиль отличает стремление к роскоши, натуральным материалам, симметрии и правильной геометрии" }, {title: "АР-деко", text: "Яркие геометрические силуэты, этнические мотивы в сочетании с экзотическими материалами"}, {title: "Современный", text: "Функциональность, комфорт и свобода в самовыражении на основе современных материалов и актуальных тенденций"}, { title: "Прованс", text: "Функциональность, комфор т и свобода в самовыражении на основе современных материалов и актуальных тенденций"}, { title: "Лофт", text: "Стиль отличает стремление к роскоши, натуральным материалам, симметрии и правильной геометрии"}, { title: "Кантри", text: "Яркие геометрические силуэты, этнические мотивы в сочетании с экзотическими материалами"}, { title: "Неокласика", text: "Функциональность, комфорт и свобода в самовыражении на основе современных материалов и актуальных тенденций"}, { title: "Минимализм", text: "Функциональность, комфорт и свобода в самовыражении на основе современных материалов и актуальных тенденц"}]
+									a(href="#").kitchen-style__item
+										figure.kitchen-style__item-img
+											img(src="img/photos/kitchen-"+(i+1)+".jpg", alt=title)
+										.kitchen-style__item-info
+											.kitchen-style__item-title=info.title
+												span 10
+											.kitchen-style__item-text=info.text
+
+
+
+
+				
+
+
+
+
+
+		include inc/footer.pug
+		include inc/scripts.pug

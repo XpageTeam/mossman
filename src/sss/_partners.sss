@@ -1,0 +1,40 @@
+.partners
+	&__list
+		display: flex 
+		flex-wrap: wrap 
+		margin: 0 0 -8px -8px
+
+	&__item 
+		display: flex 
+		align-items: center
+		justify-content: center
+		width: calc((100% - 8px * 6) / 6)
+		margin: 0 0 8px 8px
+		background: #f8f8fa
+		padding: 45px 10px
+
+@media screen and (max-width: 1500px)
+
+	.partners__item
+		width: calc((100% - 8px * 5)/5)
+
+@media screen and (max-width: 1400px)
+
+	.partners__item
+		width: calc((100% - 8px * 4)/4)
+
+
+@media screen and (max-width: 1200px)
+	.partners__item
+		padding: 25px 10px
+
+@media screen and (max-width: 1000px)
+	.partners__item
+		width: calc((100% - 8px * 3)/3)
+
+@media screen and (max-width: 667px)
+	.partners__item
+		width: calc((100% - 8px * 2)/2)
+		padding: 15px 10px
+
+

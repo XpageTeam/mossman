@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Каталог
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		header.head
+			.wrapper
+				.head__wrap
+					.head__logo
+						a.logo(href="#")
+							img(src="img/logo.png" srcset="img/logo@2x.png 2x, img/logo@3x.png 3x")
+							img(src="img/logo-inner.png", alt="")
+					.head__phone
+						a(href="tel: 88006000706") 8 800 600 07 06
+					nav.head__menu
+						ul.head__menu-list 
+							li.head__menu-item
+								.head__menu-item-burger
+								a(href="#").head__menu-link Кухни
+								.submenu
+									.submenu__item
+										a.submenu__link(href="#") По стилям
+									.submenu__item
+										a.submenu__link(href="#") По коллекции
+
+							li.head__menu-item
+								a(href="#").head__menu-link О компании
+							li.head__menu-item
+								a(href="#").head__menu-link Покупателям
+							li.head__menu-item
+								a(href="#").head__menu-link Сотрудничество
+							li.head__menu-item
+								a(href="#").head__menu-link Контакты
+
+					.head__burger
+						.burger
+							span
+		
+		main#content
+			.main-content
+				section.intro__cont
+					.intro-bg
+						.intro-bg__text Mossman
+					.wrapper--min
+						.intro
+							.intro-title Кухни Mossman<br> в классическом стиле
+							.intro-text
+								.text-page
+									p Стиль отличает стремление к роскоши, натуральным материалам, симметрии<br> и правильной геометрии. Ближайшие родственные стили:
+									ul
+										li барокко – подчёркнутое богатство, роскошь и изобилие;
+										li рококо – более  изящная и лёгкая интерпретация барокко;
+										li ампир – триумфальная величественность и парадность;
+										li неоклассика — традиционная классика в современном прочтении.
+				section.catalog__cont
+					.wrapper--big
+						.catalog
+							.catalog__list
+								each title, i in ['Savoy', 'Sorento lux', 'Versale', 'Grazia', 'Sorento', 'Avalon', 'Kavari', 'Elegant', 'Alba', 'Gloria', 'Edel', 'Astoria', 'Patrizia', 'Valencia', 'Milena', 'Selena']
+									a(href="#").catalog__item
+										figure.catalog__item-img
+											img(src="img/photos/catalog-"+(i+1)+".jpg", alt="")
+											.catalog__item-label-list
+												.catalog__item-label.hit хит
+										.catalog__item-title=title
+										.catalog__item-price от 47 300 руб./п. м
+
+
+
+
+
+
+
+
+
+
+
+
+
+							
+
+		include inc/footer.pug
+		include inc/scripts.pug

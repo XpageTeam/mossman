@@ -1,0 +1,51 @@
+.main-banner
+	position: relative
+	z-index: 10
+
+
+	&__cont
+		position: relative
+
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: -1px
+			display: block
+			background: url('../img/mossman-banner-bg.svg') no-repeat bottom
+			background-size: contain
+			pointer-events: none
+			z-index: 30
+
+	&__item
+
+		img
+			display: block
+			width: 100%
+	&__list 
+		position: relative
+		
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			display: block
+			background: rgba(0, 0, 0, 0.4)
+
+
+@media screen and (max-width: 667px)
+
+	.main-banner
+
+		&__item
+
+			img
+				
+				height: calc(100vh - 70px)
+			
+

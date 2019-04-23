@@ -1,0 +1,188 @@
+.cities
+	&__item
+
+		a
+			position: relative
+			
+			font-size: rem(20)
+			letter-spacing: .02em
+			color: #cfcfcf
+			padding-left: 25px
+
+			&:before 
+				content: ''
+				display: block
+				position: absolute
+				left: 0
+				top: 5px
+				size: 7px
+				background: #cfcfcf
+				border-radius: 50%
+
+		&.active
+			a
+				color: #000
+
+				&:before
+					background: var(--mainColor)
+
+		&:not(:first-child)
+			margin-top: 17px
+
+.vacancies
+
+	&-cont
+		margin-top: -50px
+
+	&__cities
+		margin-bottom: 40px
+
+	&__top
+		position: relative
+		
+		font-size: rem(20)
+		padding: 22px 50px 22px 0
+		border-bottom: 1px solid #000
+		letter-spacing: .02em
+		cursor: pointer
+
+		&.js__animate
+			&:after
+				height: 0
+
+
+		&:after 
+			content: ''
+			position: absolute
+			display: block
+			right: 29px
+			top: calc(50% - 6px)
+			width: 2px
+			height: 12px
+			background: #000
+			transition: height .3s ease
+			transform-origin: center center
+
+		&:before
+			content: ''
+			position: absolute
+			display: block
+			right: 23px
+			top: calc(50% - 1px)
+			width: 14px
+			height: 2px
+			background: #000
+
+
+
+	&__info
+		display: flex
+		padding: 47px 0
+
+		&-cont
+			display: none
+			
+		
+
+		&-text
+			width: calc(100% - 465px)
+
+			.text-page
+				> *
+					&:not(:first-child)
+						margin-top: 30px
+
+				p 
+					font-size: rem(20)
+					letter-spacing: .02em
+
+				ul 
+					margin-top: 20px !important
+
+		&-aside
+			margin-left: auto
+			flex: none
+			margin-top: 13px
+
+
+	&-aside
+		background: var(--secondColor)
+		padding: 37px 42px 37px 52px
+		letter-spacing: .02em
+		position: sticky
+		top: 20px
+
+		&__top
+			margin-bottom: 30px
+			font-weight: 500
+			a 
+				color: var(--mainColor)
+
+
+		&__bot
+			margin-top: 38px
+
+
+		&__label
+			color: #666
+			font-size: rem(13) 
+
+			&:not(:first-child)
+				margin-top: 21px
+
+		&__text
+			margin-top: 7px
+			font-weight: 500
+
+
+@media screen and (max-width: 1500px)
+
+	.vacancies-cont
+		margin-top: 0
+
+@media screen and (max-width: 1300px)
+
+	.cities__item:not(:first-child)
+		margin-top: 10px
+
+	.vacancies
+		&__cities
+			margin-bottom: 25px
+
+		&__top
+			padding: 15px 50px 15px 0
+
+@media screen and (max-width: 1000px)
+	
+	.vacancies
+		&-aside
+			padding: 1.4rem
+
+			&__top
+				margin-bottom: 15px
+
+			&__bot
+				margin-top: 25px
+
+			&__label:not(:first-child)
+				margin-top: 15px
+
+		&__info
+			flex-direction: column-reverse
+			padding: 1.4rem 0
+
+			&-text
+				width: 100%
+				padding-top: 1.4rem
+
+			&-aside 
+				width: 100%
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,120 @@
+.intro
+	max-width: 510px
+
+	&__cont
+		position: relative
+		padding: 105px 0 146px
+
+	&-title
+		font-size: rem(30)
+		font-weight: bold
+		line-height: 1.2
+		margin-bottom: 37px
+		letter-spacing: .02em
+
+
+	&-text 
+		font-size: rem(14)
+		line-height: 1.9
+		font-weight: 300
+
+
+	&-bg
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: -1
+		display: flex 
+		align-items: center
+		opacity: 0
+
+		&__text
+			font-size: rem(186)
+			color: #f8f8fa
+			font-weight: bold
+			text-transform: uppercase
+			display: flex
+			flex: 1 1 auto
+			padding: 0 25px
+
+
+			span
+				position: relative
+				line-height: 1
+				transition: transform .5s ease, opacity .3s ease
+				opacity: 0
+
+				&:not(:last-child)
+					margin-right: 10px
+
+				&:first-child 
+					margin-left: auto
+					
+				&:nth-last-child(1)
+					order: -1
+				&:nth-last-child(2)
+					order: -2
+
+		&.js__animate
+			opacity: 1
+
+			span
+				transform: translate3d(0,0,0) !important
+				opacity: 1
+
+@media screen and (max-width: 1600px)
+
+	.intro-bg__text
+		font-size: 6.625rem
+			
+@media screen and (max-width: 1500px)
+
+	.intro
+		&__cont
+			padding: 55px 0
+
+		&-bg
+			display: none
+
+		&-title
+			margin-bottom: 15px
+
+
+
+@media screen and (max-width: 1300px)
+
+
+	.intro-bg__text
+		font-size: 5.625rem
+
+
+@media screen and (max-width: 1200px)
+
+	.intro-title
+		font-size: 1.7rem
+		margin-bottom: 15px
+
+@media screen and (max-width: 1000px)
+
+	.intro
+		&__cont
+			padding: 35px 0
+
+		&-bg
+			display: none
+
+
+@media screen and (max-width: 667px)
+	.intro
+		&__cont
+			padding: 1.4rem 0
+			
+
+		&-title
+			font-size: 1.2rem
+			margin-bottom: 10px
+
+
+		

@@ -1,0 +1,414 @@
+.main-nav
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	height: 100%
+	display: flex 
+
+	> .wrapper 
+
+		display: flex
+		flex: 1 1 auto
+		flex-direction: column
+
+
+.js__load
+	.nav-main__item
+		opacity: 1 !important
+		transform: translate3d(0,0,0) !important
+		transition: opacity 1s ease, transform 1s ease
+.nav-main
+
+	color: #fff
+	display: flex
+	flex-direction: column
+	flex: 1 1 auto
+	justify-content: center
+
+	&__item
+		display: flex 
+		align-items: center
+		opacity: 0
+		will-change: transform, opacity
+
+
+		
+
+		&:first-child
+			margin-top: 30px
+
+		&:not(:first-child)
+			margin-top: 22px
+
+		&:last-child
+			margin-top: 125px
+
+			.nav-main__item-link
+				position: relative
+				display: flex
+				align-items: center
+			
+				font-size: rem(16)
+				font-weight: 400
+
+				&:before 
+					content: ''
+					display: block
+					size: 20px
+					background: url('../img/ico-calc-red.svg') no-repeat center
+					background-size: contain
+					margin-right: 15px
+					position: relative
+					transform: none
+					
+
+
+		&-link
+			position: relative
+			color: currentColor
+			font-size: rem(73)
+			line-height: 1
+			font-weight: bold
+
+			// background: var(--mainColor)
+
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				width: 100%
+				display: block
+				transform-origin: top center
+				background: var(--mainColor)
+				transform: translate3d(100%,0,0)
+				transition: transform .3s ease
+
+			&:hover
+				&:before
+					transform-origin: bottom center
+					transform: translate3d(0,0,0)
+					transition: transform .3s ease
+
+
+
+.nav-link-text
+	// color: #fff
+	// transition: color .1s ease
+
+
+	// &:hover
+
+// 	background: linear-gradient(to right, var(--mainColor), var(--mainColor))
+// 	-webkit-background-clip: text!important
+// 	background-clip: text!important
+// 	color: transparent
+
+.nav-link-mask
+	display: inline-block
+	width: 100%
+	height: 100%
+	position: absolute
+	top: 0
+	left: 0
+	overflow: hidden
+	transform: translate3d(-100%,0,0)
+	transition: transform .4s ease
+	display: none
+	
+
+.nav-link-mask-text
+	position: absolute
+	top: 0
+	left: 0
+	color: var(--mainColor)
+	transform: translate3d(100%,0,0)
+	transition: transform .4s ease
+	line-height: 1
+	// display: none
+	
+
+.nav-main__item-link
+	&:hover, &:focus
+		.nav-link-mask
+			transform: translate3d(0,0,0)
+
+			&-text
+				transform: translate3d(0,0,0)
+
+
+
+
+.sub-menu
+	display: flex
+	color: #fff
+	margin-left: 45px
+
+
+	&__item
+
+		&:not(:first-child)
+			margin-left: 40px
+
+		&-link
+			position: relative
+			color: currentColor
+			display: flex
+			align-items: center
+			line-height: 1
+
+
+			&:after
+				// content: attr(data-count)
+				content: ''
+				size: 26px
+				display: inline-block
+				background: url('../img/ico-logo.svg') no-repeat center
+				background-size: contain
+				color: #fff
+				font-size: rem(13)
+				margin-left: 14px
+				text-align: center
+				line-height: 28px
+
+.js__has-submenu
+	
+	&:after 
+		content: ''
+		position: absolute
+		display: block
+		
+		right: -18px
+		top: calc(50% - 5px)
+		size: 6px
+		border-right: 1px solid #000
+		border-bottom: 1px solid #000
+		transform: rotate(45deg)
+
+.head__menu
+	&-list
+		display: flex
+
+	.submenu
+		position: absolute
+		top: 100%
+		left: -20px
+		opacity: 0
+		pointer-events: none
+		transition: opacity .3s ease
+		padding: 20px
+		background: #fff
+
+
+		&__link
+			white-space: nowrap
+			transition: color .5s ease
+
+			&:hover 
+				color: var(--mainColor)
+
+		&__item 
+			&:not(:first-child)
+				margin-top: 5px
+
+			&.active
+
+				.submenu__link 
+					color: var(--mainColor)
+
+			
+
+	&-item
+		position: relative
+		
+		display: flex 
+		align-items: center
+		flex-wrap: wrap
+		cursor: pointer
+		
+
+		&:not(:first-child)
+			margin-left: rem(76)
+
+		&-burger
+			position: relative
+			size: 20px 14px
+			border-top: 1px solid #000
+			border-bottom: 1px solid #000
+			margin-right: 28px
+			transition: transform .3s ease
+			display: none
+			
+
+			// &:after 
+			// 	content: ''
+			// 	size: 100% 1px 
+			// 	background: #000
+			// 	display: block
+			// 	position: absolute
+			// 	top: 50%
+			// 	left: 0
+
+			// ~ .submenu
+			// 	padding-left: 47px
+			// 	left: 0
+
+		&:hover
+			.head__menu-item-burger
+				transform: rotate(90deg)
+
+			.submenu
+				opacity: 1
+				pointer-events: all
+
+
+	&-link
+		font-weight: bold
+		white-space: nowrap
+
+
+
+
+.inner 
+	.head__wrap
+		padding: 55px 0
+
+
+@media screen and (max-width: 1600px)
+	
+	.nav-main__item-link
+		font-size: 3.5625rem
+
+
+@media screen and (max-width: 1500px)
+	.nav-main__item
+		&-link
+			font-size: 3rem
+
+		&:first-child
+			margin-top: 0
+
+		&:last-child
+			margin-top: 95px
+
+	.head__menu-item:not(:first-child)
+		margin-left: 3.75rem
+
+@media screen and (max-width: 1400px)
+
+	.nav-main__item-link
+		font-size: 2rem
+
+
+@media screen and (max-width: 1300px)
+
+	.head__menu-item
+		&:not(:first-child)
+			margin-left: 2.75rem
+
+
+
+@media screen and (max-width: 1200px)
+
+	.nav-main
+		&__item
+			&:last-child
+				margin-top: 35px
+
+			&-link
+				font-size: 1.6rem
+
+@media screen and (max-width: 1000px)
+
+	.nav-main__item
+
+		&:not(:first-child)
+			margin-top: 15px
+
+		&-link
+			font-size: 1.4rem
+
+	.sub-menu
+		margin-left: 30px
+
+		&__item
+			&:not(:first-child)
+				margin-left: 20px
+
+			&-link
+				&:after
+					margin-left: 7px
+
+
+@media screen and (max-width: 667px)
+
+	body, html 
+		overflow-x: hidden
+	.sub-menu
+		margin-left: 15px
+
+		&__item-link:after
+			width: 20px
+			height: 20px
+			line-height: 19px
+
+	.nav-link-text
+		color: #fff !important
+
+	.sub-menu__item
+		&-link
+			font-size: rem(13)
+
+		&:not(:first-child)
+			margin-left: 10px
+
+	.nav-main__item
+		opacity: 1 !important
+
+		&:last-child
+			margin-top: 35px
+
+	.nav-main__item-link
+		font-size: 1.4rem
+
+	.mobile-menu
+		.menu__item
+			&:last-child
+				.menu__link
+					padding: 0
+					a 
+						padding: 15px
+						display: block
+
+
+@media screen and (max-width: 370px)
+
+	.nav-main__item
+		flex-direction: column
+		align-items: flex-start
+
+	.sub-menu
+		flex-direction: column
+		margin-left: 0
+
+		&__item
+			margin-left: 0 !important
+			margin-top: 5px
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+

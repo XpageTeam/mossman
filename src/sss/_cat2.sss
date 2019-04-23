@@ -1,0 +1,103 @@
+.cat2
+	/**/
+
+.cat-item
+	position: relative
+	flex-direction: column
+	display: flex
+	align-items: flex-start
+	padding: 25px 38px 38px 46px
+
+	&__img
+		flex: none
+		display: flex
+		justify-content: center
+
+	&__img, &__buy
+		align-self: stretch
+
+	&__label
+		position: absolute 36px 38px * *
+
+	&__title
+		font-size: rem(16)
+		line-height: lh(22, 16)
+		margin-bottom: 11px
+		flex: 1 1 auto
+
+		a
+			font: inherit
+			border-bottom: none
+			color: inherit
+
+	&__id
+		color: rgba(0, 0, 0, .4)
+		background: var(--secondColor)
+		border-radius: 16px
+		font-size: 12px
+		line-height: 1
+		padding: 8px 13px
+		text-transform: lowercase
+		margin-bottom: 25px
+
+	&__buy
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	&__price
+		font-weight: bold
+		font-size: rem(20)
+		line-height: lh(25, 20)
+		white-space: nowrap
+
+		&-cont
+			flex: none
+
+		&-bot
+			color: var(--mainColor)
+			padding-left: 31px
+			position: relative
+			font-weight: bold
+			margin: 10px 0 0
+			white-space: nowrap
+
+			&:before
+				border-radius: 50%
+				content: "?"
+				line-height: 18px
+				text-align: center
+				size: 20px
+				position: absolute calc(50% - 10px) * * 0
+				border: 1px solid currentColor
+
+	&__to-cart
+		flex: none
+
+.add-to-cart
+	display: block
+	border-radius: 50%
+	size: 49px
+	transition: background .3s ease
+	background: url("../img/ico-to-cart.png") center no-repeat, var(--secondColor)
+
+	&:matches(:hover, :focus, .added)
+		background: url("../img/ico-to-cart-added.png") center no-repeat, var(--mainColor)
+
+.label
+	color: #fff
+	text-transform: lowercase
+	font-size: 12px
+	line-height: 1
+	padding: 5px 12px 6px
+	border-radius: 15px
+
+	&--stock
+		background: #ffa42e
+
+	&--new
+		background: var(--mainColor)
+
+@media screen and (max-width: 1280px)
+	.cat-item
+		padding: 25px 28px

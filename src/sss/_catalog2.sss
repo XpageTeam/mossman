@@ -1,0 +1,112 @@
+.catalog2
+
+	&__top
+		display: flex
+		margin-left: -31px
+
+		&-filter, &-sort
+			margin-left: 31px
+
+		&-filter
+			width: calc((100% - 31px * 3) / 3)
+
+		&-sort
+			width: calc((133.37% - 31px * 2) / 2)
+
+	&__container
+		margin: 34px 0 0
+
+.cat2
+
+	&.plate
+		display: flex
+		flex-wrap: wrap
+		margin: 0 0 -31px -31px
+
+		.cat2
+
+			&__item
+				width: calc((100% - 31px * 3) / 3)
+				margin: 0 0 31px 31px
+				display: flex
+				flex-direction: column
+
+		.cat-item
+			flex: 1 1 auto
+			padding: 18px
+
+	&.list
+
+		.cat2
+
+			&__item
+
+				&:not(:first-child)
+					margin: 12px 0 0
+
+		.cat-item
+			display: block
+
+			&:after
+				content: ""
+				display: table
+				clear: both
+
+			&__img
+				float: left
+				margin-right: rem(80)
+				text-align: center
+				width: 185px
+
+				img
+					display: inline-block
+
+			&__label
+				right: auto
+				left: rem(35)
+
+			&__id
+				display: inline-block
+
+			&__to-cart
+				position: absolute 0 rem(53) 0 *
+				display: flex
+				align-items: center
+
+				.counter
+					margin-right: rem(48)
+
+	&__item
+		border: 1px solid var(--borderColor)
+
+.counter
+	display: flex
+	align-items: center
+
+	&__btn, input
+		flex: none
+
+	input
+		border: none
+		width: 28px
+		text-align: center
+
+	&__btn
+		size: 32px
+		position: relative
+
+		&--plus, &--minus
+
+			&:after
+				content: ''
+				position: absolute calc(50% - 1px) calc(50% - 6px) * *
+				size: 11px 1px
+				background: rgba(0, 0, 0, .23)
+
+		&--plus
+
+			&:before
+				content: ""
+				position: absolute calc(50% - 6px) calc(50% - 1px) * *
+				size: 1px 11px
+				background: rgba(0, 0, 0, .23)

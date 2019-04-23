@@ -1,0 +1,131 @@
+.main-content
+	margin: 29px 0 0
+
+.main-catalog
+	display: flex
+	justify-content: space-between
+	padding: 0 0 32px
+
+	&__aside
+		width: 360px
+
+	&__right
+		width: calc(100% - 390px)
+
+	&__aside, &__right, &__nav
+		display: flex
+		flex-direction: column
+
+	&__list
+		margin: 29px 0 0
+
+	&__nav
+		flex: 1 1 auto
+
+.main-cat
+	flex: 1 1 auto
+	display: flex
+	flex-direction: column
+
+	&__item
+		flex: 1 1 auto
+		display: flex
+		flex-direction: column
+
+		&:not(:last-child)
+			margin-bottom: 1px
+
+	&__link
+		display: flex
+		align-items: center
+		flex: 1 1 auto
+		min-height: 55px
+		padding: 12px 50px 11px 25px
+		background: var(--secondColor)
+		transition: background .3s ease, color .3s ease
+
+		&:matches(:hover, :focus)
+			background: var(--mainColor)
+			color: #fff
+
+			&.have-sub
+
+				&:after
+					border-color: #fff
+
+			.hover-img
+				opacity: 1
+
+		&-img
+			width: 38px
+			display: flex
+			align-items: center
+			justify-content: center
+			flex: none
+			margin-right: rem(23)
+			position: relative
+
+			.hover-img
+				position: absolute 0
+				margin: auto
+				transition: opacity .3s ease
+				opacity: 0
+
+		&.have-sub
+			position: relative
+
+			&:after
+				content: ""
+				position: absolute
+				border: 1px solid #000101
+				border-left: none
+				border-bottom: none
+				opacity: .4
+				size: 6px
+				transform: rotate(45deg)
+				right: 32px
+				top: calc(50% - 3px)
+				transition: border-color .3s ease
+
+.main-cat-block
+	display: flex
+	flex-wrap: wrap
+	margin: 0 0 -29px -29px
+
+	&__item
+		position: relative
+		width: calc((100% - 29px * 2) / 2)
+		margin: 0 0 29px 29px
+
+		&-desc
+			position: absolute 0
+			padding: 30px 120px 30px 39px
+
+		&-title
+			font-weight: bold
+			font-size: rem(22)
+			line-height: lh(29, 22)
+
+			&:after
+				content: ""
+				position: absolute * * 41px 42px
+				background: url("../img/ico-black-arrow.png") no-repeat
+				size: width("../img/ico-black-arrow.png") height("../img/ico-black-arrow.png")
+
+		&-list
+			margin: 15px 0 0
+
+			li
+
+				&:not(:first-child)
+					margin: 2px 0 0
+
+			a
+				color: #adb4c6
+				border-bottom: none
+
+		&-img
+
+			img
+				display: block
+				width: 100%

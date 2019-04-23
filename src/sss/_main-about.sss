@@ -1,0 +1,125 @@
+.main-about
+	margin: 100px 0
+
+	&__cont 
+		display: flex
+		align-items: center
+
+	&__img
+		flex: none
+		position: relative
+		size: 385px 210px
+		background: #fff
+		display: flex
+		justify-content: center
+		margin-right: 165px
+
+		&:after 
+			content: ''
+			display: block
+			position: absolute
+			top: calc(50% - 45px)
+			left: calc(50% - 45px)
+			size: 90px
+			border-radius: 50%
+			background: url('../img/ico-play.svg') no-repeat center right 26px, #fff			
+
+		&:hover
+
+			figure
+				width: 100%
+				border-radius: 6px
+
+		figure
+			background: #fff
+			size: 210px
+			transition: width .4s ease, border-radius .4s ease
+			overflow: hidden
+			border-radius: 50%
+			position: relative
+			display: flex
+			justify-content: center
+			
+
+			img
+				display: block
+				max-width: none
+
+	&__info
+		max-width: 465px
+
+		&-title
+			font-size: rem(20)
+			margin-bottom: 35px
+
+		&-text
+			line-height: 1.7
+
+@media screen and (max-width: 1600px)
+
+	.main-about
+		margin: 50px 0
+
+		&__info-title
+			margin-bottom: 30px
+
+
+@media screen and (max-width: 1300px)
+
+	.main-about__img
+		margin-right: 110px
+
+@media screen and (max-width: 1200px)
+
+	.main-about
+		margin: 40px 0
+
+		&__img
+			margin-right: 30px
+
+		&__info
+			max-width: 100% 
+			
+		.main-about__info
+			&-title
+				br 
+					display: none
+					
+			&-text 
+				br 
+					display: none
+					
+@media screen and (max-width: 1200px)
+
+	.main-about
+		&__img
+			width: 280px
+
+		&__info-title
+			font-size: 1.2rem
+			margin-bottom: 10px
+			line-height: 1.4
+
+
+@media screen and (max-width: 1000px)
+	.main-about
+		&__cont
+			display: block
+
+		&__img
+			width: 300px
+			float: right
+			margin: 0 0 20px 20px
+			
+			figure
+				width: auto
+				height: auto
+				border-radius: 0
+
+@media screen and (max-width: 667px)
+
+	.main-about__img
+		width: 100%
+		float: none
+		margin: 0 0 20px 0
+

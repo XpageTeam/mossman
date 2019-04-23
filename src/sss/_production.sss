@@ -1,0 +1,77 @@
+.production
+	&__item
+		display: flex
+		flex-direction: column
+		align-items: center
+		background: var(--secondColor)
+		padding: 75px 30px
+
+		&:not(:first-child)
+			margin-top: 70px
+
+		&-info
+			max-width: 750px
+
+		&-ico
+			span
+				margin-top: -90px
+				display: block
+			svg
+				color: var(--mainColor)
+				size: 30px
+
+		&-title 
+			font-size: rem(24)
+			font-weight: bold
+			color: #32373c
+			text-align: center
+			margin-bottom: 30px
+			
+		&-text 
+			text-align: center
+			line-height: 1.7
+
+	&-cont
+		margin-top: 60px !important
+
+	&-analog
+		margin-top: 50px
+		
+		.catalog__item
+			width: calc((100% - 6px * 3) / 3)
+
+@media screen and (max-width: 1500px)
+
+	.production
+		&__item
+			padding: 45px 30px
+
+			&-ico 
+				span
+					margin-top: -53px
+
+			&-title
+				margin-bottom: 20px
+
+
+@media screen and (max-width: 1000px)
+
+	.production
+		&__item
+			&:not(:first-child) 
+				margin-top: 40px
+
+@media screen and (max-width: 667px)
+
+	.production
+		&__item
+			padding: 30px 1.4rem 1.4rem
+
+			&-ico span
+				margin-top: -40px
+
+			&-title
+				font-size: 1.2rem
+				margin-bottom: 8px
+				line-height: 1.3
+				

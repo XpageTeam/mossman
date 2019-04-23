@@ -1,0 +1,366 @@
+.cart-one
+	&__info
+		margin-top: 78px
+		padding-bottom: 57px
+		border-bottom: 1px solid #000
+
+		.item
+			&-label
+				font-size: rem(14)
+				margin-bottom: 5px
+
+			&-title 
+				font-size: rem(34)
+				line-height: 1
+				font-weight: bold
+				// letter-spacing: .02em
+
+			&-price 
+				font-size: rem(16)
+				padding: 8px 15px
+				border-radius: 30px
+				background: var(--secondColor)
+				display: inline-block
+
+			&-bot
+				&-label
+					font-size: rem(13)
+					font-weight: 300
+					letter-spacing: .02em
+					color: #ccc
+					margin-bottom: 5px
+
+				&-text
+					font-size: rem(14)
+					line-height: 1.9
+
+
+		&-top 
+			display: flex
+			flex-direction: column
+			margin-bottom: 25px
+			min-height: 94px
+
+			.cart-one__info-item
+
+				&:not(:first-child)
+					margin-top: 10px
+
+		&-item
+			&:nth-child(1)
+				// width: 30%
+			&:nth-child(2)
+				.item-title
+					font-size: rem(17)
+					line-height: 1.2
+					font-weight: 400
+					color: #ccc
+				// width: 70%
+			// &:nth-child(3)
+			// 	width: 278px
+			// 	margin-left: auto
+				
+
+		&-bot
+			display: flex
+
+	&__btn
+		width: 278px
+		margin-left: auto
+
+		&-list
+			border-top: 1px solid #e7e7e7
+
+		&-item
+			border-bottom: 1px solid #e7e7e7
+
+			a 
+				display: inline-block
+				padding: 28px 45px
+				line-height: 1
+				font-size: rem(14)
+
+
+	&__bot
+		&-list
+			display: flex
+			flex-wrap: wrap
+			width: 70%
+			margin: 0 0 -20px -20px
+
+			.cart-one__info-item
+				width: calc((100% - 20px * 2) / 2.2)
+				margin: 0 0 25px 20px
+
+
+	&__description
+		border-bottom: 1px solid #000
+		margin: 60px 0 -4px
+		padding-bottom: 70px
+
+		&-title 
+			font-size: rem(20)
+			margin-bottom: 20px
+
+		.text-page 
+			line-height: 1.8
+			max-width: 830px
+			font-size: rem(14)
+
+			> * 
+				&:not(:first-child)
+					margin-top: 22px
+
+
+
+.main-slider
+	position: relative
+	overflow: hidden
+
+	.swiper
+
+		&-slide
+
+			&:not(:first-child):not([style])
+				opacity: 0 !important
+
+		&-pagination
+			position: absolute * 66px 66px *
+			width: auto
+			left: auto
+
+			&-bullet
+				margin: 0 !important
+				border-radius: 50%
+				position: relative
+				size: 18px
+				border-radius: 50%
+				overflow: hidden
+				background: none
+				text-indent: -9999px
+				color: #fff
+				transition: border-color .3s ease
+				border: 1px solid transparent
+				opacity: 1
+
+				&:before
+					content: ""
+					position: absolute 50% * * 50%
+					transform: translate3d(-50%, -50%, 0)
+					size: 11px
+					border-radius: inherit
+					background: currentColor
+					transition: transform .3s ease
+
+				&:not(:last-child)
+					margin-right: 10px !important
+
+				&-active
+					border-color: currentColor
+					
+					&:after
+						transform: scale3d(.83, .83, .83) translate3d(-50%, -50%, 0)
+
+.main-slide
+	position: relative
+
+	&__img
+
+		img
+			display: block
+			width: 100%
+
+	&__desc
+		position: absolute 0
+		color: #fff
+		// padding-left: 69px
+		// padding-right: 69px
+		padding: 20px 69px
+		display: flex
+		flex-direction: column
+		justify-content: center
+
+	&__title
+		font-weight: bold
+		font-size: rem(48)
+
+	&__subtitle
+		font-size: rem(22)
+
+	&__btn
+		margin: 18px 0 0
+
+.cat-item
+
+	&:hover 
+		.cat-item__text
+			opacity: 1
+			pointer-events: all
+
+	&__text
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		background: var(--mainColor)
+		color: #fff
+		font-size: rem(14)
+		display: flex
+		flex-direction: column 
+		align-items: flex-start
+		justify-content: center
+		padding: 1.4rem 60px
+		opacity: 0
+		pointer-events: none
+		transition: opacity .3s ease
+
+
+@media screen and (max-width: 1600px)
+	.cart-one
+		&__info
+			margin-top: 50px
+			padding-bottom: 30px
+
+			&-top
+				min-height: 75px
+
+		&__description
+			margin: 30px 0 0
+			padding-bottom: 40px
+
+	.slider-progress
+		bottom: 1.75rem
+
+@media screen and (max-width: 1500px)
+
+	.cart-one
+		&__info
+			margin-top: 35px
+			padding-bottom: 25px
+
+			.item-title
+				font-size: 1.6rem
+
+
+		&__btn-item a
+			padding: 23px 45px
+
+@media screen and (max-width: 1200px)
+
+	.gallery-btn
+		width: 50px
+		height: 50px
+		top: calc(100% - -20px)
+
+@media screen and (max-width: 1000px)
+	.cart-one
+		&__info
+			&-top
+				flex-wrap: wrap
+				align-items: center
+
+			&-item
+				&:nth-child(3)
+					width: 100%
+					margin-top: 20px
+
+			&-bot
+				flex-direction: column-reverse
+
+		&__bot
+
+			&-list
+				width: 100%
+				margin: 0 0 -15px -20px
+
+				.cart-one__info-item 
+					width: calc((100% - 20px * 2) / 2) !important
+					margin: 0 0 15px 20px
+
+					&:nth-child(3) 
+						width: auto
+						margin-top: 20px
+
+
+		&__btn
+			width: 100%
+			margin-bottom: 20px
+			border-bottom: 1px solid #e7e7e7
+
+			&-item
+				border: 0
+
+			&-list
+				display: flex
+				width: 100%
+
+		&__slider
+			&-img
+				img 
+					height: 500px
+					object-fit: cover 
+					object-position: center
+
+			.slick
+				&-prev
+					left: 1.4rem
+
+				&-next 
+					right: 1.4rem
+
+@media screen and (max-width: 667px)
+
+	.gallery-btn
+		left: calc(50% - 25px)
+
+	
+	.cart-one
+		&__info
+			margin-top: 1.4rem
+			padding-bottom: 1.4rem
+
+			&-top
+				flex-direction: column
+				align-items: flex-start
+
+			&-item
+				width: 100% !important
+
+				&:not(:first-child)
+					margin-top: 20px
+
+			.item-title
+				font-size: 1.3rem
+
+		&__btn
+			&-list
+				flex-direction: column
+
+			&-item
+				&:not(:first-child)
+					border-top: 1px solid #e7e7e7
+
+		&__description
+			margin: 1.4rem 0 0
+			padding-bottom: 1.4rem
+
+			&-title
+				margin-bottom: 10px
+
+	.cart-one__bot-list 
+		.cart-one__info-item 
+			width: 100% !important
+			margin: 0 0 15px 20px
+
+	.cart-one__info .item-bot-label
+		color: #7d7d7d
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,142 @@
+.main-sliders
+	position: relative
+
+	&__cont
+		padding: rem(76) 0 rem(70)
+
+	&__title
+		position: relative
+		font-size: rem(20)
+		transition: color .3s ease
+		letter-spacing: .02em
+		padding-left: 25px
+
+		&:not(:first-child)
+			margin-left: 43px
+
+		&:before
+			content: ''
+			size: 5px
+			border-radius: 50%
+			background: var(--mainColor)
+			position: absolute
+			left: 0
+			top: 10px
+
+
+
+
+		&:not(.active)
+			cursor: pointer
+			color: rgba(198, 204, 219, .83)
+
+			&:before
+				content: ''
+				size: 5px
+				border-radius: 50%
+				background: rgba(198, 204, 219, .83)
+
+		&.active
+
+			+ .main-sliders__switcher
+
+				.sliders-switcher
+
+					&__circle
+						transform: translate3d(0, 0, 0)
+
+		&-cont
+			display: flex
+			align-items: center
+			margin-bottom: 37px
+
+.cat-item
+	&__img
+		height: 255px
+		display: flex 
+		justify-content: center
+		align-items: center
+		border: 1px solid #efefef
+
+		img
+			display: block
+
+
+.stock-slider
+	position: relative
+	
+	&:not(.active)
+		position: absolute 0
+		opacity: 0
+		pointer-events: none
+
+	.swiper
+
+		&-slide
+			height: auto
+			display: flex
+			flex-direction: column
+			// margin-right: 6px !important
+
+		&-list
+			overflow: hidden
+
+	> .stock-slider
+
+		&__slide
+
+			&:nth-child(n + 4)
+				display: none !important
+
+	&__slide
+		display: flex
+		flex-direction: column
+		flex: 1 1 auto
+
+		.cat-item
+			background: #fff
+			flex: 1 1 auto
+
+	.slick
+
+		&-arrow
+			// background: url("../img/ico-black-arrow.png") no-repeat
+			// size: width("../img/ico-black-arrow.png") height("../img/ico-black-arrow.png")
+			position: absolute
+			// top: calc(50% - height("../img/ico-black-arrow.png") / 2)
+
+		&-prev
+			right: calc(100% + 33px)
+			transform: rotateY(180deg)
+
+		&-next
+			left: calc(100% + 33px)
+
+@media screen and (max-width: 1600px)
+
+	.main-sliders
+		&__cont
+			padding: 2.75rem 0
+
+		&__title-cont
+			margin-bottom: 30px
+
+@media screen and (max-width: 1200px)
+	.cat-item
+		&__img
+			height: 205px
+
+
+@media screen and (max-width: 667px)
+	
+	.main-sliders
+		&__title
+
+			&:not(:first-child)
+				margin-left: 0
+				
+			&-cont
+				flex-direction: column
+				align-items: flex-start
+
+

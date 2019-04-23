@@ -1,0 +1,71 @@
+.expert
+	&__item
+		&-top
+			position: relative
+			font-size: rem(20)
+			letter-spacing: .02em
+			
+			background: var(--secondColor)
+			line-height: 1.2
+			padding: 36px 70px
+			margin-bottom: 20px
+			cursor: pointer
+
+			&:before 
+				content: ''
+				display: block
+				position: absolute
+				left: 38px
+				top: calc(50% - 2px)
+				size: 4px
+				background: #000
+				border-radius: 50%
+
+			&:after 
+				content: ''
+				display: block
+				position: absolute
+				right: 35px
+				top: calc(50% - 5px)
+				width: 12px
+				height: 9px
+				background: url('../img/ico-arrow.svg') no-repeat center
+
+			
+
+		&-info
+			display: none
+			
+
+		.text-page
+			padding: 14px 37px 36px
+			line-height: 1.7
+
+
+@media screen and (max-width: 1600px)
+
+	.expert
+		&__item
+			&-top
+				padding: 25px 50px
+				margin-bottom: 10px
+
+				&:before
+					left: 25px
+
+				&:after
+					right: 25px	
+
+@media screen and (max-width: 1000px)
+
+	.expert__item .text-page
+		padding: 14px 1.4rem 30px
+
+@media screen and (max-width: 1000px)
+
+	.expert__item-top
+		padding: 21px 50px 21px 40px
+		margin-bottom: 10px
+		font-size: 1.1rem
+
+

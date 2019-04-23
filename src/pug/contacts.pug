@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Контакты
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		header.head
+			.wrapper
+				.head__wrap
+					.head__logo
+						a.logo(href="#")
+							img(src="img/logo.png" srcset="img/logo@2x.png 2x, img/logo@3x.png 3x")
+							img(src="img/logo-inner.png", alt="")
+					.head__phone
+						a(href="tel: 88006000706") 8 800 600 07 06
+					nav.head__menu
+						ul.head__menu-list 
+							li.head__menu-item
+								.head__menu-item-burger
+								a(href="#").head__menu-link Кухни
+								.submenu
+									.submenu__item
+										a.submenu__link(href="#") По стилям
+									.submenu__item
+										a.submenu__link(href="#") По коллекции
+
+							li.head__menu-item
+								a(href="#").head__menu-link О компании
+							li.head__menu-item
+								a(href="#").head__menu-link Покупателям
+							li.head__menu-item
+								a(href="#").head__menu-link Сотрудничество
+							li.head__menu-item
+								a(href="#").head__menu-link Контакты
+
+					.head__burger
+						.burger
+							span
+		main#content
+			.main-content
+				section.intro__cont
+					.intro-bg
+						.intro-bg__text Mossman
+					.wrapper--min
+						.intro
+							.intro-title Контакты
+							.intro-text
+								.text-page
+									p Мебельная фабрика mossman – эксперт в области производства стильных, эргономичных и максимально функциональных кухонь. Изысканные дизайнерские решения не оставят равнодушными даже самых искушенных клиентов
+
+
+				section.contacts-cont
+					.wrapper--min
+						.contacts
+							.contacts__list
+								.contacts__item
+									.contacts__item-top г. Чебоксары
+									.contacts__item-info
+										.contacts__el.address
+											.contacts__el-label Адрес
+											address.contacts__el-text г. Чебоксары<br> Лапсарский пр., 39
+										.contacts__el.phone
+											.contacts__el-label Адрес
+											.contacts__el-text 
+												.contacts__el-phone
+													a(href="tel:88006000706") 8 (800) 600-07-06<br>
+													| Звонок по России бесплатный
+										.contacts__el.time
+											.contacts__el-label Время работы
+											.contacts__el-text  пн-вт 9.00-17.00<br> сб, вс — выходной
+
+										.contacts__el.map
+											.contacts__el-text
+												.contacts__el-map  Смотреть на карте
+									.contacts__item-map
+										.map
+											img(src="img/map.png", alt="")
+
+								.contacts__item
+									.contacts__item-top г. Санкт-Петербург
+									.contacts__item-info
+										.contacts__el.address
+											.contacts__el-label Адрес
+											address.contacts__el-text г. Чебоксары<br> Лапсарский пр., 39
+										.contacts__el.phone
+											.contacts__el-label Адрес
+											.contacts__el-text 
+												.contacts__el-phone
+													a(href="tel: 8 (8352) 700-500") 8 (8352) 700-500
+													a(href="tel: 8 (8352) 700-505") 8 (8352) 700-505
+
+										.contacts__el.time
+											.contacts__el-label Время работы
+											.contacts__el-text  10.00-20.00<br> ежедневно без выходных
+
+										.contacts__el.map
+											.contacts__el-text
+												.contacts__el-map Смотреть на карте
+									.contacts__item-map
+										.map
+											img(src="img/map.png", alt="")
+
+							.contacts-form
+								.contacts-form__title Связаться с нами
+								.contacts-form__content
+									form(action="")
+										.forms-wrap
+											.forms__input-cont
+												input.forms__input(type="text" required="" placeholder="")
+												label.forms__label Ваше имя
+											.forms__input-cont
+												input.forms__input(type="email" required="" placeholder="")
+												label.forms__label E-mail
+											.forms__input-cont
+												input.forms__input(type="text" required="" placeholder="")
+												label.forms__label Сообщение
+										.forms-bot
+											input.arrow-btn(type="submit" value="Отправить")
+
+									
+
+
+
+
+
+
+
+
+
+									
+
+
+
+
+
+
+			
+		include inc/footer.pug
+		include inc/scripts.pug

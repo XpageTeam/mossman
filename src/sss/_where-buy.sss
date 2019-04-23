@@ -1,0 +1,320 @@
+.banner
+	&-top
+		position: relative
+		margin-bottom: 40px
+
+		img 
+			display: block
+			width: 100%
+
+		&-cont
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			z-index: 10
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			
+		&-title 
+			font-size: rem(56)
+			line-height: 1
+			font-weight: bold
+			color: #fff
+			margin-top: rem(230)
+			
+.search
+	&-block
+		margin-top: rem(110)
+
+			
+
+		.btn-clear
+			position: absolute
+			top: 0
+			right: 40px
+			height: 53px
+			width: 40px
+			display: flex 
+			justify-content: center 
+			align-items: center
+			opacity: 0
+			pointer-events: none
+			cursor: pointer
+			display: none
+			
+
+			span 
+				height: 15px
+				
+
+	&-input
+		border: 0
+		height: 53px
+		border-radius: 10px !important
+		padding: 0 50px 0 23px
+		min-width: 567px
+		background-image: url('../img/ico-zoom.svg')
+		background-position: right 10px center
+		background-repeat: no-repeat
+
+		&:valid
+			~ .btn-clear
+				opacity: 1
+				pointer-events: all
+
+		&-cont
+			position: relative
+			display: flex 
+
+		
+
+
+			
+
+	&-submit
+		height: 53px
+		width: 40px
+		border: 0
+		border-radius: 0 10px 10px 0  !important
+		background: url('../img/ico-zoom.svg') no-repeat center, #fff
+		font-size: 0 !important
+		display: none
+
+		
+.where-buy
+	&__top
+		position: relative
+		cursor: pointer
+		font-size: rem(20)
+		letter-spacing: .02em
+		
+		padding: 30px 75px
+		background: url('../img/ico-location.svg') no-repeat left 43px center
+		border-bottom: 1px solid #d8d8db
+
+		&:after 
+			content: ''
+			display: block
+			size: 8px
+			border-right: 1px solid #000
+			border-bottom: 1px solid #000
+			transform: rotate(45deg)
+			position: absolute
+			right: 40px
+			top: calc(50% - 4px)
+			transition: transform .3s ease
+
+		&.js__animate
+			&:after
+				transform: rotate(225deg)
+
+	&__info
+		display: none
+
+		&.js__open
+
+
+
+
+
+
+
+		
+
+
+	&__el
+		position: relative
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 45px 0 45px 100px
+
+		&-map 
+			flex: none
+
+		&-text, &-address
+			display: flex 
+			flex-direction: column
+			color: #666
+
+			a 
+				color: currentColor
+
+		&-text
+			max-width: 430px
+
+
+		&-title 
+			font-size: rem(20)
+			color: #666
+			margin-bottom: 25px
+
+		&-address
+			&:not(:first-child)
+				margin-top: 10px
+
+		&-emails
+			display: flex 
+			flex-direction: column
+
+		&-slider
+			position: relative
+			max-width: 543px
+			margin-left: 1.4rem
+
+			// &:after 
+			// 	content: ''
+			// 	position: absolute
+			// 	top: 0
+			// 	left: 0
+			// 	width: 100%
+			// 	height: 100%
+			// 	display: block
+			// 	z-index: 1
+			// 	background: url("../img/slider-bg.png") no-repeat center
+			// 	background-size: cover
+
+			.slick
+				&-arrow
+					position: absolute
+					top: calc(50% - 24px)
+					z-index: 10
+
+					size: 50px
+
+					&:before 
+						content: ''
+						position: absolute
+						top: calc(50% - 5px)
+						left: calc(50% - 5px)
+						display: block
+						size: 10px
+						border-right: 1px solid #fff
+						border-top: 1px solid #fff
+						transform: rotate(45deg)
+
+
+
+				&-prev 
+					left: 0
+					transform: rotate(180deg)
+
+				&-next 
+					right: 0
+
+
+
+
+
+		&-text
+
+			> *
+				&:not(:first-child)
+					margin-top: 10px
+
+			.btn-action__list
+				margin: 20px 0 0 0
+				justify-content: flex-start
+
+				a
+					// width: calc((100% - 8px * 2) / 2)
+					width: auto !important
+					padding: 1rem
+					white-space: nowrap
+					display: flex
+					
+
+
+slick-slide
+
+@media screen and (max-width: 1600px)
+	.banner-top-title
+		margin-top: 0
+
+	.search-block
+		margin-top: 20px
+
+@media screen and (max-width: 1500px)
+	.where-buy__top
+		padding: 25px 75px
+
+@media screen and (max-width: 1400px)
+	
+	.where-buy
+		&__el
+			padding: 45px 0 45px 40px
+
+		&__top
+			padding: 25px 60px
+			background: url('../img/ico-location.svg') no-repeat left 32px center
+
+@media screen and (max-width: 1200px)
+
+	.banner-top-title
+		font-size: 2rem
+		margin-top: 30px
+
+	.where-buy__el-slider
+		max-width: 475px
+
+@media screen and (max-width: 1000px)
+
+	.where-buy
+		&__top
+			padding: 16px 40px
+			background-position: 15px center
+
+			&:after 
+				right: 15px
+
+		&__el
+			flex-direction: column
+			align-items: flex-start
+			padding: 1.4rem
+
+			&-title
+				margin-bottom: 10px
+
+			&-text
+				margin-bottom: 20px
+
+				.btn-action__list a
+					width: auto
+
+			&-map
+				width: 100% !important
+
+			&-slider 
+				margin-left: 0
+
+@media screen and (max-width: 667px)
+
+
+	.where-buy__el-slider
+		max-width: 100%
+	
+	.search-input
+		height: 46px
+		padding: 0 15px 0 15px
+		min-width: 280px
+
+	.where-buy
+		&__top
+			padding: 10px 20px
+			background-position: 6px center
+			font-size: 1rem
+
+		&__el
+			padding: 1.4rem 0
+
+			&-title
+				font-size: 1rem
+
+			&-text
+				width: 100%
+
+

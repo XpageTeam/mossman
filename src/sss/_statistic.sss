@@ -1,0 +1,110 @@
+.statistic
+	padding: 95px 0 125px
+
+	&__list
+		display: flex
+		justify-content: space-between
+
+	&__item
+		text-align: center
+
+		&:hover
+			.statistic-ico 
+				color: var(--mainColor)
+
+
+
+		
+
+	&__num 
+		font-size: rem(40)
+		line-height: 1
+		font-weight: bold
+		margin-bottom: 15px
+		width: 165px
+
+	&__text
+		line-height: 1.6
+
+	&-ico 
+		color: #F8F8FA
+		margin-top: 45px
+		transition: color .3s ease
+
+@media screen and (max-width: 1600px)
+	.statistic
+		padding: 70px 0 75px
+		
+@media screen and (max-width: 1500px)
+
+	.statistic
+		padding: 55px 0
+
+@media screen and (max-width: 1200px)
+
+	.statistic
+		&__num
+			font-size: 2.2rem
+			margin-bottom: 10px
+
+		&-ico
+			margin-top: 20px
+
+@media screen and (max-width: 1000px)
+
+	.statistic
+		padding: 35px 0
+
+		&__num
+			font-size: 1.6rem
+
+		&-ico
+			color: var(--mainColor)
+
+@media screen and (max-width: 667px)
+
+	.statistic
+		padding: 25px 0
+		
+		&__list
+			flex-wrap: wrap 
+			margin: 0 0 -25px -10px
+
+		&__item 
+			width: calc((100% - 10px * 2) / 2)
+			margin: 0 0 25px 10px
+
+		&-ico
+			margin-top: 10px
+			
+			svg
+				width: 34px	
+
+@media screen and (max-width: 370px)
+
+	.statistic
+		&__list
+			margin: 0 0 -25px 0
+
+		&__item
+			display: flex 
+			flex-direction: column
+			margin: 0 0 25px 0
+
+		&__text 
+			margin-bottom: auto
+			
+
+		&__num 
+			width: 100%
+
+	.slider-collection__nav 
+		.slick
+			&-prev
+				left: 1rem
+
+			&-next 
+				right: 1rem
+
+
+

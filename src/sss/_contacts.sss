@@ -1,0 +1,220 @@
+.contacts
+	&-cont
+		margin-top: -75px
+		padding-bottom: 45px
+
+	&__item
+		letter-spacing: .02em
+		border-bottom: 1px solid #000
+		padding-bottom: 25px
+
+		&:not(:first-child)
+			padding-top: 60px
+
+
+		&-map
+			display: none
+			
+
+		&-top
+			position: relative
+			font-size: rem(20)
+			letter-spacing: .02em
+			padding: 0 25px
+
+			&:before 
+				content: ''
+				display: block
+				size: 7px
+				border-radius: 50%
+				background: var(--mainColor)
+				position: absolute
+				top: 11px
+				left: 2px
+
+		&-info
+			display: flex
+			padding: 35px 0 25px 30px
+
+	&__el
+		&:nth-child(1)
+			width: 30%
+		&:nth-child(2)
+			width: 30%
+		&:nth-child(3)
+			width: 25%
+		&:nth-child(4)
+			width: 15%
+
+		&-map 
+			line-height: 1
+
+		&.map
+			align-self: center
+			cursor: pointer
+			padding-left: 20px
+			background: url('../img/ico-location.png') no-repeat left 0 center
+			
+
+		&-label
+			font-size: rem(13)
+			color: #666
+			margin-bottom: 5px
+
+		&-text 	
+			line-height: 1.8
+
+		&-phone 
+			display: flex 
+			flex-direction: column
+
+
+	&-form
+		margin-top: 115px
+
+		&__title 
+			font-size: rem(30)
+			font-weight: bold
+			margin-bottom: 20px
+			letter-spacing: .02em
+
+		.forms
+			&-wrap
+				flex-wrap: nowrap
+				width: calc(100% - 135px)
+				float: left
+				margin: 0 0 0 -50px
+
+
+			&-bot
+				display: inline-block
+				float: right
+				margin: 0
+
+			&__input
+				color: #000
+				&-cont
+					width: calc((100% - 50px * 2) / 2)
+					margin: 0 0 0 50px
+
+
+
+		.arrow-btn
+			margin: 0
+			background: #fff 
+			border: 1px solid #000
+			color: #000
+
+
+		&__content
+			display: flex 
+
+			form 
+				flex: 1 1 auto
+				display: flex
+				justify-content: space-between
+				align-items: flex-end
+
+
+@media screen and (max-width: 1500px)
+
+	.contacts-cont
+		margin-top: 0
+
+@media screen and (max-width: 1200px)
+	
+	.contacts__item-info
+		padding: 25px 0 25px 0px
+
+	.contacts__el
+		&:nth-child(1)
+			width: 25%
+
+		&:nth-child(4)
+			width: 20%
+
+@media screen and (max-width: 1000px)
+
+	.contacts
+
+		&__item
+		
+			&-info 
+				flex-wrap: wrap
+				margin: 0 0 -20px -20px
+
+		&__el
+			width: calc((100% - 20px * 2) / 2) !important
+			margin: 0 0 20px 20px
+
+		&-form
+			margin-top: 40px
+
+			&__content 
+				form
+					flex-wrap: wrap
+
+			.forms__input-cont 
+				width: calc((100% - 20px * 2)/2)
+				margin: 0 0 0 20px
+
+
+			.forms
+				&-wrap
+					width: 100%
+					margin: 0 0 0 -20px
+
+				&-bot
+					width: 100%
+					margin-top: 20px
+
+@media screen and (max-width: 667px)
+	.contacts
+		&__el
+			width: 100% !important
+			margin: 0 0 20px 20px
+
+		&__item
+			&-info
+				padding: 15px 0
+
+			&-map
+				.map
+					height: 250px !important 
+
+					> ymaps
+						height: 250px !important 
+
+						> ymaps
+							height: 250px !important 
+
+
+	
+
+		&-form
+			margin-top: 20px
+
+			&__title
+				font-size: 1.5rem
+
+			.forms-wrap
+				flex-wrap: wrap
+
+
+			.forms__input-cont 
+				width: 100%
+				margin: 0 0 20px 20px
+
+			.forms-wrap 
+				margin: 0
+
+
+
+
+
+
+
+
+
+
+

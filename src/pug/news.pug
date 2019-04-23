@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Новости
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		header.head
+			.wrapper
+				.head__wrap
+					.head__logo
+						a.logo(href="#")
+							img(src="img/logo.png" srcset="img/logo@2x.png 2x, img/logo@3x.png 3x")
+							img(src="img/logo-inner.png", alt="")
+					.head__phone
+						a(href="tel: 88006000706") 8 800 600 07 06
+					nav.head__menu
+						ul.head__menu-list 
+							li.head__menu-item
+								.head__menu-item-burger
+								a(href="#").head__menu-link Кухни
+								.submenu
+									.submenu__item
+										a.submenu__link(href="#") По стилям
+									.submenu__item
+										a.submenu__link(href="#") По коллекции
+
+							li.head__menu-item
+								a(href="#").head__menu-link О компании
+							li.head__menu-item
+								a(href="#").head__menu-link Покупателям
+							li.head__menu-item
+								a(href="#").head__menu-link Сотрудничество
+							li.head__menu-item
+								a(href="#").head__menu-link Контакты
+
+					.head__burger
+						.burger
+							span
+		main#content
+			.main-content
+				.title-block__cont
+					.wrapper
+						.title-block
+							.title-block__crumbs
+								.bread-crumbs
+									a.bread-crumbs__link(href='#') 
+									span.bread-crumbs__this 
+							.title-block__title
+								h1 Новости
+
+
+				section.news-cont
+					.wrapper--min
+						.news
+							.news__list
+								each info, i in [{title: "3500 км – расстояние между городами чебоксары", text: "Около 3 000 экспонентов, 40 000 кв. м площади и 80 000 посетителей специалистов — всё это крупнейшая..." }, {title: "Внедрение 3cad evolution", text: "Фабрика “Mossman” запустила процесс внедрения программы “3САD Evolution” в производство кухонь." }, {title: "Расширение производственных мощностей", text: "Мечтайте больше! Теперь мы сможем реализовать еще больше ваших идей, потому что увеличили производственные" }, {title: "3500 км – расстояние между городами чебоксары", text: "Около 3 000 экспонентов, 40 000 кв. м площади и 80 000 посетителей специалистов — всё это крупнейшая..." }]
+									a(href="#").news__item
+										figure.news__item-img
+											img(src="img/photos/news-"+(i+1)+".jpg", alt=title)
+										.news__item-info
+											.news__item-title=info.title
+											.news__item-text=info.text
+
+					.btn-more 
+						a(href="#") Смотреть еще
+
+
+
+
+
+			
+		include inc/footer.pug
+		include inc/scripts.pug

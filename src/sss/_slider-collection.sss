@@ -1,0 +1,195 @@
+.slider-collection
+	position: relative
+
+	&__block
+		.slick-arrow 
+			display: none !important
+
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		
+		width: 1px
+		height: 100%
+		top: 0
+		right: calc(100% / 3 - 4px)
+		background: rgba(255, 255, 255, 0.3)
+		z-index: 1
+
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		
+		width: 1px
+		height: 100%
+		top: 0
+		left: calc(100% / 3 - 4px)
+		background: rgba(255, 255, 255, 0.3)
+		z-index: 1
+
+	&__item
+		position: relative
+
+		&:before 
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			display: block
+			background: rgba(0, 0, 0, 0.60)
+
+
+
+	&__nav
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		height: 100%
+
+
+
+		.slick
+			&-track
+				display: flex !important
+				height: 100%
+
+			&-slide
+				position: relative
+				
+				display: flex !important
+				flex-direction: column
+				flex: 1 1 auto
+
+				&:not(.slick-current)
+					
+					.slider-nav__item-text
+						color: rgba(255, 255, 255, 0.4)
+
+						span
+							&:nth-child(2)
+								opacity: 0
+								transition: opacity .3s ease
+				&.slick-current
+					.slider-nav__item-text
+						color: #fff
+
+			&__item-text
+				span
+					&:nth-child(2)
+						transition: opacity .3s ease
+						transition-delay: 10s
+
+
+			&-list
+				height: 100%
+
+
+				
+			&-prev
+				transform: rotate(180deg)
+				left: calc(100% / 3 - 21px)
+
+			&-next 
+				right: calc(100% / 3 - 21px)
+
+	.slick-arrow
+		position: absolute
+		top: calc(50% - 18px)
+		size: 37px
+		border-radius: 50%
+		z-index: 12
+		background: url('../img/ico-arrow-white.svg') no-repeat center
+		background-color: var(--mainColor)
+			
+	img 
+		display: block
+		width: 100%
+
+
+
+.slider-nav
+	&__item
+		display: flex !important
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		color: #fff
+		flex: 1 1 auto
+
+		&-text 
+			display: flex 
+			flex-direction: column
+			text-align: center
+
+			span 
+				&:nth-child(1)
+					font-size: rem(30)
+					font-weight: bold
+					margin-bottom: 30px
+
+				&:nth-child(2)
+					font-size: rem(12)
+					text-transform: uppercase
+					letter-spacing: .1em
+					
+					
+					
+
+	&__list
+		height: 100%
+			
+
+.slick-slide > div 
+	display: flex
+	flex-direction: column
+	flex: 1 1 auto
+
+
+@media screen and (max-width: 1600px)
+	.slider-collection 
+		img
+			max-height: 500px
+
+@media screen and (max-width: 1500px)
+	.slider-collection 
+		img
+			max-height: 450px
+
+
+@media screen and (max-width: 1200px)
+	.slider-collection 
+		img
+			max-height: 400px
+
+@media screen and (max-width: 1200px)
+
+	.slider-nav__item-text span:nth-child(1)
+		font-size: 1.5rem
+		margin-bottom: 5px
+
+@media screen and (max-width: 1200px)
+	.slider-collection 
+		img
+			max-height: auto
+
+@media screen and (max-width: 667px)
+
+	.slider-collection
+		&:before, &:after 
+			display: none
+
+		&__nav
+
+			.slick
+				&-prev
+					left: 1.4rem
+
+				&-next
+					right: 1.4rem
+
+

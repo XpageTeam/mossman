@@ -1,0 +1,698 @@
+@import "../css/common.css"
+
+@import "_vars.sss"
+@import "_base.sss"
+@import "_form-elements.sss"
+// @import "_range.sss"
+@import "../css/swiper.css"
+@import "selectize/dist/css/selectize.default.css"
+
+@import "_selectize.sss"
+@import "_breadcrumbs.sss"
+@import "_header.sss"
+@import "_main-nav.sss"
+@import "_main-slider.sss"
+@import "_main-about.sss"
+@import "_statistic.sss"
+@import "_slider-collection.sss"
+@import "_catalog.sss"
+@import "_intro.sss"
+@import "_cat-one-slider.sss"
+@import "_cart-one-info.sss"
+@import "_stock-slider.sss"
+@import "_top-cont.sss"
+@import "_kitchen-style.sss"
+@import "_stoke.sss"
+@import "_404.sss"
+@import "_projects.sss"
+@import "_news.sss"
+@import "_partners.sss"
+@import "_expert.sss"
+@import "_production.sss"
+@import "_contacts.sss"
+@import "_vacancies.sss"
+@import "_where-buy.sss"
+@import "_modal-visible.sss"
+@import "_standart-page.sss"
+
+
+
+
+@import "_footer.sss"
+
+a
+	transition: color .2s ease !important
+
+	&:hover 
+		color: var(--mainColor)
+		text-decoration-color: var(--mainColor)
+		border-color: var(--mainColor)
+
+
+
+
+.main
+	.progresscontainer
+		display: none
+
+	#content
+		margin: 0
+		
+.svg-anime
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 57
+	width: 100%
+	height: 100%
+	pointer-events: none
+	display: none
+	
+
+	svg 
+		display: block
+
+	path.js__animated
+		stroke-dashoffset: 0 !important
+		transition: stroke-dashoffset 8s ease
+
+.link-more
+	margin-top: 35px
+	display: inline-block
+
+	&:hover
+		a 
+			color: var(--mainColor)
+		&:after 
+			transform: translateX(-5px)
+
+
+	&:after 
+		content: ''
+		background: url('../img/ico-arrow-red.svg') no-repeat center
+		size: 12px 9px
+		display: inline-block
+		margin-left: 15px
+		transition: transform .3s ease
+
+
+	a 
+		text-decoration: none
+		color: #000
+		border: 0
+
+.inner
+	.logo 
+		img
+			&:first-child
+				display: none
+
+	#content
+		padding-top: 146px
+
+.page-kitchen
+
+	.logo
+		&-img 
+			color: var(--mainColor)
+		&-text 
+			color: #fff
+	.head
+		background: transparent
+
+	.burger span
+		background: #fff
+
+	&.mobile-menu--open .burger > span
+		background: 0 0
+
+	#content
+		padding-top: 0
+
+	.logo 
+		img
+			&:first-child
+				display: block
+
+			&:last-child 
+				display: none
+
+	.head
+
+		&.js__scroll
+			background: #fff
+
+			.head
+				&__menu
+					&-link
+						color: #000
+
+					&-item-burger
+						border-color: #000
+
+						&:after
+							background: #000
+
+					.submenu
+						background: #fff
+
+						&__link
+							color: #000 
+
+
+
+				&__phone a
+					color: #000
+
+			.js__has-submenu:after
+				border-color: #000
+
+			.logo 
+				img
+					&:first-child
+						display: none
+					
+					&:nth-child(2)
+						display: block
+
+
+						
+
+
+		&__phone 
+			a
+				color: #fff
+
+		&__menu
+			&-link
+				color: #fff
+
+			&-item-burger
+				border-top: 1px solid #fff
+				border-bottom: 1px solid #fff
+
+				&:after 
+					background: #fff
+
+			.submenu
+				background: transparent
+
+	.js__has-submenu
+		&:after
+			border-color: #fff
+
+	.submenu__link
+		color: #fff
+
+	.footer
+		.submenu__link
+			color: #000
+
+.circle
+	size: 40px
+	border-radius: 50%
+	color: #fff
+	font-size: rem(12)
+	text-transform: uppercase
+	line-height: 40px
+	text-align: center
+
+	
+.hit
+	background: var(--mainColor)
+
+.ico
+	&-design 
+		background: url('../img/ico-pencil-w.svg') no-repeat left 4px center
+	&-calc
+		background: url('../img/ico-calc-red.svg') no-repeat left 4px center
+		background-size: 16px
+
+.btn-action
+	&__list
+		display: flex 
+		justify-content: center
+		margin-left: -8px
+
+		a 
+			padding: 19px 32px 19px 25px
+			background: var(--mainColor)
+			color: #fff
+			text-decoration: none
+			line-height: 1
+			display: flex 
+			align-items: center
+			justify-content: center
+			width: calc((100% - 8px * 3) / 3.5)
+
+			&:not(:first-child)
+				margin-left: 8px
+
+			&:first-child
+
+				svg 
+					fill: #fff
+
+			span 
+				margin-right: 27px
+
+.btn
+	padding: 18px 30px
+	border: 1px solid #000
+	display: inline-block
+	
+	&-more
+		display: flex 
+		justify-content: center
+		margin-top: 148px
+
+		a
+			letter-spacing: .02em
+			border: 1px solid #e7e7e7
+			padding: 27px
+			line-height: 1
+
+.grecaptcha-badge
+	z-index: 400
+
+.mobile-menu
+	display: none
+	position: absolute
+	right: 0
+	top: 0
+	height: 100%
+	width: 290px
+	background: #fff
+	overflow-x: hidden
+
+	> a 
+		display: block
+		padding: 24px 18px
+		font-size: rem(17)
+		font-weight: bold
+		border-bottom: 1px solid var(--borderColor)
+
+	.nav-main__item
+		margin-top: 0
+		border-bottom: 1px solid var(--borderColor)
+
+		a
+			display: block
+			padding: 24px 18px
+			
+			font-size: rem(17)
+
+
+	.submenu
+		position: absolute
+		right: 0
+		top: 0
+		height: 100%
+		width: 290px
+		background: #fff
+		transform: translate3d(100%,0,0)
+		transition: transform .3s ease
+		z-index: 10
+
+	.menu__item
+		&:last-child
+			.submenu
+				display: none
+
+			.menu__link:after
+				display: none
+
+			.menu__link
+				padding: 0
+
+				a
+					display: block
+					padding: 24px 18px
+
+	
+
+				
+
+
+	.menu__link, .submenu__link
+		display: block
+		width: 100%
+		padding: 24px 18px
+		font-size: rem(17)
+		font-weight: bold
+		border-bottom: 1px solid #eee
+
+.js
+	&__open-submenu
+		.submenu
+			transform: translate3d(0,0,0)
+
+	&__has-submenu
+
+		> .menu__link
+			position: relative
+
+			&:after
+				content: ''
+				display: inline-block
+				size: 8px
+				border-top: 1px solid #000
+				border-right: 1px solid #000
+				transform: rotate(45deg)
+				position: absolute
+				right: 15px
+				top: calc(50% - 4px)
+
+
+		
+	&__back
+		position: relative
+		display: flex 
+		align-items: center
+
+		&:before 
+			content: ''
+			display: inline-block
+			size: 8px
+			border-top: 1px solid #000
+			border-left: 1px solid #000
+			transform: rotate(-45deg)
+			margin-right: 10px
+
+
+
+.page-wr
+	background: #fff
+	z-index: 1
+	transition: transform .3s ease
+	display: flex
+	flex-direction: column
+	flex: 1 1 auto
+
+	&:before 
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		size: 100%
+		background-color: rgba(0,0,0,0.75)
+		z-index: 400
+		opacity: 0
+		visibility: hidden
+		transition: opacity 0.5s ease
+
+.mobile-menu--open
+	.page-wr
+		&:before 
+			opacity: 1
+			visibility: visible
+
+	.head 
+		.wrapper
+			position: relative
+			
+			&:before 
+				opacity: 1
+				visibility: visible 
+
+.progresscontainer
+	width: 100%
+	height: 5px
+	margin-bottom: 0px
+	position: absolute
+	bottom: 0
+	top: 0
+	left: 0
+	overflow: hidden
+
+
+.progressbar
+	width: 0%
+	float: left
+	height: 100%
+	max-width: 100%
+	background-color: var(--mainColor)
+	transition: width .6s ease
+
+.swiper-pagination-bullet-active
+	opacity: 1
+	background: var(--mainColor)
+
+.wrapper--min
+	.wrapper--min
+		padding: 0
+
+.wrapper__catalog--gallery
+	margin-top: 50px
+
+	.catalog__item
+		width: calc((100% - 6px * 3) / 3)
+
+.btn-action__list 
+	a
+		transition: background .3s ease
+		&:hover
+			background: #b91633
+
+.form-result-info
+	.fancybox-content
+		overflow: visible !important
+
+	.forms
+		max-width: 400px !important
+
+	.notetext 
+		color: #fff !important
+		font-size: rem(16) !important
+
+	.fancybox-close-small
+		position: fixed !important
+		right: 0 !important
+		top: 0 !important
+
+
+.back-link
+	color: var(--mainColor)
+
+
+@media screen and (max-width: 1600px)
+	.top-cont
+		padding: 90px 0
+
+
+@media screen and (max-width: 1500px)
+
+	#content
+		margin-bottom: 45px
+
+	.inner 
+		#content
+			padding-top: 110px
+
+	.top
+		&-cont
+			padding: 60px 0
+
+		&__links 
+			a
+				font-size: 1.5rem
+				line-height: 1.2
+				border-bottom: 2px solid transparent
+
+	.page-kitchen
+		#content
+			padding-top: 0
+
+	.btn-more
+		margin-top: 95px
+
+@media screen and (max-width: 1400px)
+	.btn-more
+		margin-top: 70px
+
+
+
+@media screen and (max-width: 1200px)
+
+	.top-cont
+		padding: 40px 0
+
+	.top__links a
+		font-size: 1.2rem
+
+
+
+@media screen and (max-width: 1000px)
+
+	.fancybox-active
+		.fancybox-content
+			overflow: visible !important
+
+		.fancybox-close-small
+			position: fixed !important
+			right: 0 !important
+			top: 0 !important
+
+	.forms-wrap
+		margin: 0 0 -35px -35px
+
+		.forms__input-cont 
+			width: calc((100% - 35px * 2) / 2)
+			margin: 0 0 35px 35px
+
+	.wrapper__catalog--gallery
+		margin-top: 30px
+
+		.catalog__item
+			width: calc((100% - 6px * 2) / 2)
+
+	.btn-more
+		margin-top: 50px
+
+
+	.progresscontainer
+		display: none
+
+	.link-more
+		margin-top: 15px
+
+	.grecaptcha-badge
+		bottom: 60px !important
+
+	#content
+		margin-bottom: 25px
+
+
+	.wrapper, .wrapper--min, .wrapper--big
+		padding: 0 1.4rem
+
+	.inner 
+		#content
+			padding-top: 0
+
+	.top-cont
+		padding: 25px 0
+
+	.mobile-menu
+		display: block
+
+	.page-kitchen
+		.head 
+			position: absolute
+
+		.burger 
+			span
+				&:before, :after
+					background: #fff
+
+		.submenu__link
+			color: #000
+
+
+	.swiper-container-horizontal > .swiper-pagination-bullets
+		bottom: -20px
+
+	.btn-action__list 
+		a
+			width: calc((100% - 8px * 2) / 2)
+
+	.banner-top img
+		height: 350px
+		object-fit: cover 
+		object-position: center
+			
+
+
+@media screen and (max-width: 667px)
+
+	.fancybox-active 
+		.page-wr, .mobile-menu
+			display: none !important
+
+
+	.forms-wrap
+		margin: 0 0 -35px 0
+
+		.forms__input-cont 
+			width: 100%
+			margin: 0 0 35px 0
+
+		.forms__input-cont
+			margin: 0 0 22px 0
+
+	.forms-bot
+		flex-direction: column
+		align-items: flex-start
+		margin: 55px 0 0
+
+		&__links
+			margin-top: 20px
+
+	.form-links
+		br 
+			display: none
+			
+
+	.popup
+
+		&-form
+			padding: 1.4rem !important
+
+			&__title
+				font-size: 1.4rem
+
+			&__content
+				margin-top: 20px
+
+
+	.wrapper__catalog--gallery
+		margin-top: 30px
+
+		.catalog__item
+			width: 100%
+
+	.main 
+		#content
+			margin-bottom: 0
+
+	.arrow-btn
+		padding: 15px 25px
+
+	.banner-top
+		margin-bottom: 21px
+
+	.btn-more a
+		padding: 20px
+
+
+
+	.top
+		&-cont 
+			padding: 1.4rem 0
+
+		&__links 
+			a
+				font-size: 1rem
+
+		&__link
+
+			&:after 
+				margin-left: 10px
+
+	.btn-action__list
+		flex-direction: column
+		margin: 0
+
+		a 
+			width: 100%
+
+
+			&:not(:first-child)
+				margin: 0
+				margin-top: 15px
+
+	.page-about-
+		iframe 
+			height: 230px !important
+

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Главная
+		include inc/head.pug
+		include inc/css.pug
+	body.main.loading
+		include inc/header.pug
+		
+		main#content
+			.main-content
+				.svg-anime
+					include ../img/banner-1.svg
+				.main-banner__cont
+					.main-banner
+						.main-banner__list
+							.main-banner__item
+								img(src="img/main-banner.jpg", alt="")
+
+						.main-nav
+							.wrapper
+								nav.nav-main
+									.nav-main__item
+										a(href="#").nav-main__item-link Кухни
+										.sub-menu
+											.sub-menu__item 
+												a(href="#" data-count="8").sub-menu__item-link Коллекции
+											.sub-menu__item 
+												a(href="#" data-count="4").sub-menu__item-link Стили
+									.nav-main__item
+										a(href="#").nav-main__item-link О компании
+									.nav-main__item
+										a(href="#").nav-main__item-link Покупателям
+									.nav-main__item
+										a(href="#").nav-main__item-link Сотрудничество
+									.nav-main__item
+										a(href="#").nav-main__item-link Контакты
+
+				.main-about
+					.wrapper--min
+						.main-about__cont
+							a(href="https://youtu.be/O2mzsmdKVqU").main-about__img.fancybox
+								figure
+									img(src="img/photos/about-1.jpg", alt="")
+							.main-about__info
+								.main-about__info-title Мебельная фабрика mossman –<br> эксперт в области производства<br> стильных, эргономичных и максимально<br> функциональных кухонь
+								.main-about__info-text Изысканные дизайнерские решения не оставят<br> равнодушными даже самых искушенных клиентов. Мы<br> практикуем индивидуальный подход при реализации каждого<br> проекта с целью воплотить в жизнь ваши пожелания на 100%
+								.link-more 
+									a(href="#") Читать
+
+				.statistic
+					.wrapper--min
+
+						.statistic__cont
+							.statistic__list 
+								.statistic__item 
+									.statistic__num(data-from="0" data-to="100000") 0
+									.statistic__text в год<br> изготавливается<br> фасадов
+									.statistic-ico
+										include ../img/ico-mossman.svg
+								.statistic__item 
+									.statistic__num(data-from="0" data-to="55000") 0
+									.statistic__text штук в год<br> производится<br> кухонных модулей
+									.statistic-ico
+										include ../img/ico-mossman.svg
+								.statistic__item 
+									.statistic__num(data-from="0" data-to="25000") 0
+									.statistic__text установлено<br> мебельных<br> ручек за год
+									.statistic-ico
+										include ../img/ico-mossman.svg
+								.statistic__item 
+									.statistic__num(data-from="0" data-to="25000") 0
+									.statistic__text кухонь находят<br> своих владельцев<br> каждый месяц
+									.statistic-ico
+										include ../img/ico-mossman.svg
+
+
+	
+				.slider-collection
+					.slider-collection__block
+						.slider-collection__list
+							.slider-collection__item 
+								img(src="img/photos/slider-collection-1.jpg", alt="")
+							.slider-collection__item 
+								img(src="img/photos/slider-collection-1.jpg", alt="")
+							.slider-collection__item 
+								img(src="img/photos/slider-collection-1.jpg", alt="")
+							.slider-collection__item 
+								img(src="img/photos/slider-collection-1.jpg", alt="")
+
+
+					.slider-collection__nav
+						.slider-nav__list
+							.slider-nav__item
+								.slider-nav__item-text
+									span Fusion
+									span Коллекция
+							.slider-nav__item
+								.slider-nav__item-text
+									span Belvedere
+									span Коллекция
+							.slider-nav__item
+								.slider-nav__item-text
+									span Contemporary
+									span Коллекция
+							.slider-nav__item
+								.slider-nav__item-text
+									span Fusion
+									span Коллекция
+
+
+
+
+
+
+
+
+							
+
+		include inc/footer.pug
+		include inc/scripts.pug

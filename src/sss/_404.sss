@@ -1,0 +1,55 @@
+.error
+	display: flex
+	align-items: center
+	justify-content: center
+
+	&__cont
+		position: relative
+		padding: 70px 0 0
+
+	&-bg
+		
+		font-size: rem(277)
+		line-height: 1
+		color: var(--secondColor)
+		font-weight: bold
+		z-index: -1
+		text-transform: uppercase
+		margin-bottom: -130px
+		margin-top: 70px
+
+		&__text
+			letter-spacing: .02em
+			text-align: center
+
+	&-num 
+		font-weight: 300
+		font-size: rem(235)
+		letter-spacing: .02em
+		line-height: 1
+
+	&-info
+		margin-left: 140px
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+
+		&__text 
+			font-size: rem(22)
+			letter-spacing: .02em
+			line-height: 1.5
+
+		&__link 
+			position: relative
+			display: flex 
+			align-items: center
+			margin-top: 40px
+
+			&:before 
+				content: ''
+				display: inline-block
+				margin-right: 20px
+				size: 35px
+				border-radius: 50%
+				background: url('../img/ico-arrow-white.png') no-repeat center, var(--mainColor)
+				transform: rotate(180deg)

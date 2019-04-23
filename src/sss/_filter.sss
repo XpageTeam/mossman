@@ -1,0 +1,41 @@
+.filter
+	background: var(--secondColor)
+	position: absolute 100% 0 * 0
+	display: none
+	z-index: 5
+
+	&__cont
+		position: relative
+
+	&__block
+		padding: 28px 36px 36px
+
+		&:not(:first-child)
+			border-top: 1px solid var(--borderColor)
+
+	&__title
+		font-weight: bold
+		font-size: rem(16)
+		margin-bottom: 22px
+
+	&__btns
+		padding: 0 36px 38px
+		display: flex
+		justify-content: space-between
+
+.filter__checkboxes
+
+	li
+		display: block
+
+		&:not(:first-child)
+			margin: 14px 0 0
+
+.filter-checks
+	display: flex
+	flex-wrap: wrap
+	margin: 25px 0 -16px -12px
+
+	&__item
+		width: calc((100% - 12px * 2) / 2)
+		margin: 0 0 16px 12px

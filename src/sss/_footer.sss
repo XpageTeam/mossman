@@ -1,0 +1,140 @@
+.footer
+	padding: rem(104) 0 
+
+	&__top
+		display: flex
+
+	&__logo 
+		margin-right: 235px
+
+		.logo
+			transition: color .3s ease
+
+			&:hover
+				color: var(--mainColor)
+
+
+
+
+	&__menu
+		display: flex 
+		flex: 1 1 auto
+		margin-right: rem(95)
+
+		a 
+			color: #000
+
+		.menu__link
+			&:hover
+				color: var(--mainColor)
+
+	a 
+		color: #000
+		text-decoration: none
+		border: 0
+		
+
+		
+		
+
+	.menu
+		display: flex
+		flex: 1 1 auto
+		justify-content: space-between
+
+		&__link
+			color: #32373c
+			font-weight: bold
+
+			
+
+	.submenu
+		margin-top: 20px
+			
+
+	&__bot
+		display: flex
+		justify-content: flex-start
+		align-items: flex-end
+		margin-top: 80px
+
+	&__devaloper
+		margin-left: auto
+
+	&__copy 
+		margin-right: 160px
+		line-height: 1
+
+	&__mail 
+		margin: 0 auto
+		
+
+
+.developer
+	display: flex
+	align-items: center
+
+	&__text
+		margin-right: 21px
+		color: #adb4c6
+
+.f-phone
+	display: flex 
+	flex-direction: column
+
+	a 
+		border: 0
+
+
+.inner
+	.footer 
+		background: var(--secondColor)
+
+
+@media screen and (max-width: 1600px)
+
+	.footer
+		padding: 3.5rem 0 6rem
+
+		&__bot
+			margin-top: 60px
+
+@media screen and (max-width: 1300px)
+
+	.footer
+		&__logo
+			margin-right: 75px
+
+		&__menu
+			margin-right: 1.9375rem
+
+@media screen and (max-width: 1200px)
+	.footer 
+		padding: 2.5rem 0 6rem
+		
+		.submenu
+			margin-top: 10px
+
+@media screen and (max-width: 1000px)
+	.footer
+		padding: 1.4rem 0 1.4rem
+		&__top
+			display: none
+
+		&__bot
+			margin-top: 0
+
+		&__copy
+			margin-right: 40px
+
+
+
+	
+@media screen and (max-width: 667px)
+	
+	.footer
+		&__phone, &__mail 
+			display: none
+
+		&__copy
+			margin-right: 0
