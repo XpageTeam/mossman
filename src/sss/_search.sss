@@ -1,0 +1,150 @@
+.search
+	&-btn
+		opacity: 1
+		pointer-events: all
+
+.search
+	&-cont
+		position: fixed
+		top: 0
+		left: 0
+		width: 100vw
+		height: 100vh
+		pointer-events: none
+		opacity: 0
+		background: #f2f5f9
+		z-index: 999
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 1.4rem
+		transform: scale(2)
+		transition: transform .7s ease, opacity .5s ease
+
+
+		input[type="text"]
+			width: 100%
+			height: 58px
+			border-radius: 10px
+			border: 0
+			font-size: rem(14)
+			padding: 0 25px
+			padding-right: 60px
+
+		input[type="submit"]
+			position: absolute
+			top: 0
+			right: 0
+			height: 58px
+			width: 58px
+			background: url('../img/ico-zoom.svg') no-repeat center
+			font-size: 0
+			border: 0
+			display: block
+			filter: invert(1)
+
+		form
+			max-width: 640px
+			width: 100%
+
+	&-wrapper
+		position: relative
+
+	&-btn
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 40px
+		height: 40px
+		border-radius: 50%
+		cursor: pointer
+		margin-left: 40px
+
+		> svg
+			stroke: #fff
+
+		&--close
+			size: 50px
+			position: absolute
+			top: 0
+			right: 0
+			display: block
+			cursor: pointer
+
+			svg
+				fill: transparent
+				opacity: .8
+				stroke: currentColor
+				stroke-width: 1.5
+				transition: stroke .1s
+
+.js__search-open
+	overflow: hidden !important
+	padding-right: 18px
+
+	.search
+		&-cont
+			opacity: 1
+			pointer-events: all
+			transform: scale(1)
+
+
+.search-page
+	iframe
+		max-width: 700px
+	form
+		position: relative
+		margin-bottom: 30px
+
+	input[type="text"]
+		width: 100%
+		height: 58px
+		border-radius: 10px
+		border: 0
+		font-size: rem(14)
+		padding: 0 25px
+		padding-right: 60px
+		border: 1px solid var(--borderColor)
+
+	input[type="submit"]
+		position: absolute
+		top: 0
+		right: 0
+		height: 58px
+		width: 58px
+		background: url('../img/ico-zoom.svg') no-repeat center
+		font-size: 0
+		border: 0
+		display: block
+		filter: invert(1)
+
+.search-item__text
+	&:not(:first-child)
+		margin-top: 20px
+		border-top: 1px solid var(--borderColor)
+		padding-top: 20px
+	>
+
+		a 
+			color: var(--mainColor)
+			font-size: rem(18)
+			font-weight: bold
+			margin-bottom: 10px
+			display: inline-block
+
+.search-item__bot
+	margin-top: 10px
+
+	small
+		&:not(:first-child)
+			margin-left: 20px
+
+		a 	
+			color: var(--mainColor)
+
+@media screen and (max-width: 660px)
+	
+	.search-btn
+		margin-left: 0
+		order: -1
+		margin-right: auto

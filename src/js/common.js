@@ -28,7 +28,15 @@ require("../css/jquery.fancybox.css");
 
 
 document.addEventListener("DOMContentLoaded", e => {
-
+	// if($(window).width() <= 660){
+	// 	// var searchBtn = $('.search-btn').clone();
+	// 	$('.aside__burger').before('<div class="search-btn"></div>');
+	// }
+	
+	$('.search-btn, .search-btn--close').click(function(){
+		var $this = $(this);
+		$('body').toggleClass('js__search-open');
+	})
 
 	$(window).on("load", function(){
 		$('.cart-one__slider, .cart-one__slider-nav').addClass('slider-loaded');

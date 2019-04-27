@@ -1,9 +1,14 @@
 .main
+	.search-btn
+		color: #fff
 	.head
 		
 		&__wrap
 			padding: 120px 0 9px
-			justify-content: space-between
+			// justify-content: space-between
+
+		&__logo
+			margin-right: auto
 
 		&__phone
 			a 
@@ -108,6 +113,10 @@
 
 .inner
 
+	.search-btn
+		svg 
+			stroke: #000
+
 	.logo
 		&-img 
 			color: var(--mainColor)
@@ -206,7 +215,14 @@
 				transition: opacity 0.5s ease
 
 
-	.inner 
+	.inner
+		.search-btn
+			width: 70px
+			justify-content: flex-start
+			order: -1
+			margin-left: 0
+
+
 		.head
 			position: static
 
@@ -313,6 +329,14 @@
 		
 
 @media screen and (max-width: 667px)
+
+	.inner
+		.head__logo
+			margin: 0 auto
+
+		.search-btn
+			margin-right: 0
+			width: 35px
 
 	.head__logo
 		max-width: 125px
