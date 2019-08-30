@@ -84,8 +84,16 @@
 		font-size: 0 !important
 		display: none
 
-		
+
+.where-buy__el-slider
+
+	&:not(.slick-initialized)		
+		.slider-where__item
+			&:not(:first-child)
+				display: none
+
 .where-buy
+
 	&__top
 		position: relative
 		cursor: pointer
@@ -119,13 +127,6 @@
 
 
 
-
-
-
-
-		
-
-
 	&__el
 		position: relative
 		display: flex
@@ -153,13 +154,26 @@
 			color: #666
 			margin-bottom: 25px
 
+		&-regim
+			color: var(--mainColor)
+
 		&-address
+			color: var(--mainColor)
+
 			&:not(:first-child)
 				margin-top: 10px
+
+		&-phones
+			a
+				color: var(--mainColor)
 
 		&-emails
 			display: flex 
 			flex-direction: column
+
+			a
+				color: var(--mainColor)
+
 
 		&-slider
 			position: relative
