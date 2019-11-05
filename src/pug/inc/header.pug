@@ -3,7 +3,10 @@ header.head
 		.head__wrap
 			.head__logo
 				a.logo(href="#")
-					img(src="img/logo.png" srcset="img/logo@2x.png 2x, img/logo@3x.png 3x")
+					span
+						include ../../img/logo.svg
+
+					//- img(src="img/logo.png" srcset="img/logo@2x.png 2x, img/logo@3x.png 3x")
 			.head__phone
 				a(href="tel: 88006000706") 8 800 600 07 06
 			.head__burger

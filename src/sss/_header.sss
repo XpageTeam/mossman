@@ -5,14 +5,10 @@
 		
 		&__wrap
 			padding: 120px 0 9px
-			// justify-content: space-between
 
 		&__logo
 			margin-right: auto
 
-		&__phone
-			a 
-				color: #fff
 
 	.logo
 		display: flex 
@@ -26,7 +22,15 @@
 
 			&:nth-child(2)
 				display: none
-				
+
+body
+	&:not(.page-lc)
+		.head
+			&.js__scroll
+				border-bottom: 1px solid #eee
+
+
+
 .head
 	position: absolute
 	top: 0
@@ -36,7 +40,6 @@
 
 
 	&.js__scroll
-		border-bottom: 1px solid #eee
 
 		.head__wrap
 			padding: 35px 0
@@ -44,8 +47,9 @@
 		.logo
 			&-img 
 				color: var(--mainColor)
+
 			&-text 
-				color: #000
+				color: currentColor
 
 
 	&__wrap
@@ -75,6 +79,7 @@
 			border-bottom: 0
 			font-size: rem(16)
 			line-height: 1
+			color: currentColor
 
 		.link-header
 			position: relative
@@ -92,8 +97,6 @@
 				background: url('../img/ico-marker-1.svg') no-repeat center
 				background-size: contain
 				
-
-
 
 .compensate-for-scrollbar
 	.head
@@ -117,11 +120,18 @@
 		svg 
 			stroke: #000
 
-	.logo
-		&-img 
-			color: var(--mainColor)
-		&-text 
-			color: #000
+	&.page-lc
+		.logo
+			&-img 
+				color: var(--mainColor)
+	
+	&:not(.page-lc)
+		.logo
+			&-img 
+				color: var(--mainColor)
+
+			&-text 
+				color: #000
 
 	.head
 		position: fixed
@@ -139,13 +149,10 @@
 				&:nth-child(2)
 					display: block
 
-		&__phone
-		
-			a 
-				color: #000
 
 		&__menu
 			margin-left: auto
+
 
 
 
