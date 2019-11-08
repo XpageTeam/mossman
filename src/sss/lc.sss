@@ -1,23 +1,31 @@
-.page-lc
+.banner-lc
+	position: absolute
+	top: -1px
+	left: 0
+	right: 0
+	z-index: -1
+	overflow: hidden
 
-	#content
-		background-image: url('../img/photos/lc-banner.jpg')
-		background-position: 50% 50%
-		background-repeat: no-repeat
-		background-size: cover
-		margin-bottom: 0
-		padding-bottom: 194px
+	img
+		width: 100%
 
-	.title-block__cont
-		margin-bottom: 0
-
-	.head, #content
+	~ .head, ~ #content
 		*
 			color: #fff
 
 
-	.head
+	~ .head
 		background-color: transparent
+
+	~ #content
+		margin-bottom: 0
+		padding-bottom: 194px
+
+	~ .title-block__cont
+		margin-bottom: 0
+
+
+
 
 .lc-nav
 	&__item
@@ -30,4 +38,79 @@
 
 		&:hover
 			color: var(--mainColor) !important
+
+
+.page-lc
+	.title-block__cont
+		padding: 35px 0
+		margin-bottom: 0
+
+	.bread-crumbs ul
+		justify-content: flex-start
+
+	.title-block__title
+		text-align: left
+
+		&:after
+			display: none
+.lc
+	display: flex
+
+	.select
+		position: relative
+
+	&-body
+		flex: 1 1 auto
+
+	&__top
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+	
+	&-search
+		position: relative
+		width: 100%
+
+		&-cont
+			max-width: 480px
+			width: 100%
+
+		input
+			&[type="text"]
+				background-color: var(--secondColor)
+				border-radius: 40px
+				height: 45px
+				border: 0
+				width: 100%
+
+			&[type="submit"]
+				position: absolute
+				bottom: 0
+				right: 0
+				border-radius: 40px
+				width: 80px
+				height: 45px
+				background-image: url('../img/ico-zoom.svg')
+				background-repeat: no-repeat
+				background-position: 50%
+				background-color: transparent
+				font-size: 0
+				border: 0
+
+
+.aside
+	width: 345px
+	margin-right: 80px
+
+	&-nav
+		&__link
+			background-color: var(--secondColor)
+			display: block
+			padding: 20px 40px
+
+			&.active
+				background-color: var(--mainColor)
+				color: #fff
+
 

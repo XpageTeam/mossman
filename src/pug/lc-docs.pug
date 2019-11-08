@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title ЛК Документы
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading.page-lc
+		header.head
+			.wrapper
+				.head__wrap
+					.head__logo
+						a.logo(href="#")
+							span
+								include ../img/logo.svg
+					.head__phone
+						a(href="tel: 88006000706") 8 800 600 07 06
+					nav.head__menu
+						ul.head__menu-list 
+							li.head__menu-item
+								.head__menu-item-burger
+								a(href="#").head__menu-link Кухни
+								.submenu
+									.submenu__item
+										a.submenu__link(href="#") По стилям
+									.submenu__item
+										a.submenu__link(href="#") По коллекции
+
+							li.head__menu-item
+								a(href="#").head__menu-link О компании
+							li.head__menu-item
+								a(href="#").head__menu-link Покупателям
+							li.head__menu-item
+								a(href="#").head__menu-link Сотрудничество
+							li.head__menu-item
+								a(href="#").head__menu-link Контакты
+
+					.head__burger
+						.burger
+							span
+		main#content
+			.main-content
+				.title-block__cont
+					.wrapper
+						.title-block
+							.title-block__crumbs
+								.bread-crumbs
+									ul
+										li.bread-crumbs__link
+											a(href='#') 
+												span Главная
+										li.bread-crumbs__this Личный кабинет
+							.title-block__title
+								h1 Личный кабинет
+				.lc-cont
+					.wrapper
+						.lc
+							aside.aside
+								.aside-nav
+									.aside-nav__item
+										a(href="#").aside-nav__link.active Документы
+									.aside-nav__item
+										a(href="#").aside-nav__link История  действий
+									.aside-nav__item
+										a(href="#").aside-nav__link Список заказов
+									.aside-nav__item
+										a(href="#").aside-nav__link Список запросов
+							.lc-body
+								.lc__top
+									.lc-search-cont
+										form(action="")
+											.lc-search
+												input(type="text" palceholder="Поиск")
+												input(type="submit" value="Найти")
+									.select
+										.label Добавить
+										.dropdown
+											ul
+												li
+													a(href="#" style="background-image: url('img/ico-doc-1.svg')") Создать папку
+												li
+													a(href="#" style="background-image: url('img/ico-doc-2.svg')") Загрузить файлы
+												li
+													a(href="#" style="background-image: url('img/ico-doc-3.svg')") Загрузить папку
+								.lc-doc
+									.lc-doc__list
+										- for (let j = 0; j < 10; j++)
+											.lc-doc__item
+												.lc-doc__menu
+													.dropdown
+														ul
+															li
+																a(href="#") Открыть
+															li
+																a(href="#") Переименовать
+															li
+																a(href="#") Копировать
+															li
+																a(href="#") Переместить
+												.lc-doc__ico(style="background-image: ('img/ico-folder.svg')")
+												.lc-doc__title
+													input(type="text" value="Новая папка 1" readonly)
+												.lc-doc__date 23 августа в 23:40
+
+									include inc/paginator.pug
+
+
+
+
+
+
+
+
+
+
+
+
+									
+
+
+
+
+
+
+
+
+
+			
+		include inc/footer.pug
+		include inc/scripts.pug

@@ -23,11 +23,10 @@
 			&:nth-child(2)
 				display: none
 
-body
-	&:not(.page-lc)
-		.head
-			&.js__scroll
-				border-bottom: 1px solid #eee
+.banner-lc
+	~ .head
+		&.js__scroll
+			border-bottom: 1px solid transparent
 
 
 
@@ -120,10 +119,9 @@ body
 		svg 
 			stroke: #000
 
-	&.page-lc
-		.logo
-			&-img 
-				color: var(--mainColor)
+	.logo
+		&-img 
+			color: var(--mainColor)
 	
 	&:not(.page-lc)
 		.logo
