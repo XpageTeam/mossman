@@ -759,7 +759,17 @@ document.addEventListener("DOMContentLoaded", e => {
 });
 
 
-// $(window).on('load', function(){
+$(window).on('load', function(){
+
+	$('input').each(function(i,el){
+		let $this = $(el);
+		let value = $this[0];
+
+		if (value.lenght) {
+			$this.closest('div').addClass('js__input-full');
+		}
+	})
+
 //   $(window).scroll(function() {
 
 //     var wintop = $(window).scrollTop(), 
@@ -771,4 +781,4 @@ document.addEventListener("DOMContentLoaded", e => {
 //     $(".progressbar").css("width",totalScroll+"%");
 //   });
 
-// });
+});

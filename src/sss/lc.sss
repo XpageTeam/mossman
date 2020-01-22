@@ -1,3 +1,72 @@
+.page-lk-
+	#form_authorize
+		max-width: 700px
+		margin: 0 auto
+
+		.forms__input-cont
+			&:nth-child(3)
+				position: relative
+				display: flex
+
+				input
+					position: absolute 0 * * 0
+					opacity: 0
+					pointer-events: none
+
+					&:checked
+
+						~ label
+
+							&:after
+								opacity: 1
+
+				label
+					cursor: pointer
+					display: flex
+					position: relative
+					user-select: none
+
+					&:before, &:after
+						content: ""
+						display: inline-block
+
+					&:before
+						flex: none
+						background: #fff
+						border: 1px solid var(--secondColor)
+						margin: 0 15px 0 0
+						size: 19px
+
+					&:after
+						border: 1px solid var(--mainColor)
+						border-top: none
+						border-left: none
+						size: 6px 10px
+						transform: rotateZ(45deg)
+						position: absolute 3px * * 7px
+						transition: opacity .1s ease
+						opacity: 0
+
+
+
+
+		input:-webkit-autofill
+			// -webkit-box-shadow: inset 0 0 0 50px #fff !important /* Цвет фона */
+			-webkit-text-fill-color: #000 !important /* цвет текста */
+			color: #999 !important /* цвет текста */
+			background: transparent
+
+			+ .forms__label
+				top: -20px !important
+		input
+			&:not(:placeholder-shown)
+				+ .forms__label
+					top: -20px
+
+
+
+
+
 .banner-lc
 	position: absolute
 	top: -1px
@@ -114,3 +183,42 @@
 				color: #fff
 
 
+@media (max-width: 1000px)
+	
+	.page-lk-
+		.banner-lc
+			display: none
+
+		#content
+			background-image: url('../img/photos/lc-banner-2.jpg')
+			background-size: cover
+
+@media (min-width: 660px)
+	
+	.page-lk-
+		.logo-text
+			fill: #fff
+			
+@media (max-width: 660px)
+	
+	.page-lk-
+		
+
+		.search-btn
+			* 
+				color: #000 !important
+
+		#form_authorize
+			padding: 0 20px
+
+			.popup-form__title
+				margin-bottom: 30px
+
+			.forms__input-cont
+				margin-bottom: 45px !important
+
+			.forms-bot
+				margin: 0
+
+		.banner-lc ~ #content
+			padding-bottom: 80px
