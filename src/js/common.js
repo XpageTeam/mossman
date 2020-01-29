@@ -656,11 +656,13 @@ document.addEventListener("DOMContentLoaded", e => {
 
 		});
 
-		$('input[type="file"]').change(function(){
+		$('body').on('change', "input[type='file']", function(){
+			console.log(1)
 			var value = $(this)[0].files[0].name;
-			$(this).prevAll('.forms__input--file-support').val(value);
-			$(this).nextAll('.forms__input--file-support').val(value);
-			$(this).closest('.forms__input-cont').addClass('js__input-full');
+			console.log(value)
+			$(this).prevAll('.forms__input--file-support, .default-input__input-filetext .default-input__input').val(value);
+			$(this).nextAll('.forms__input--file-support, .default-input__input-filetext .default-input__input').val(value);
+			$(this).closest('.default-input').addClass('js__input-full');
 		});
 
 		//start 

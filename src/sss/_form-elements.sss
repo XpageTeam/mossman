@@ -269,3 +269,90 @@
 		svg
 			stroke-width: 2.4 !important
 
+
+
+.default-input
+	position: relative
+
+
+	&__input
+		border-radius: 0
+		border: 1px solid transparent
+		color: #000 transparent
+		width: 100%
+		transition: border-color .3s ease
+		border-radius: 5px
+		height: 51px
+		background-color: #fff
+		padding: 15px 17px
+
+		
+		&.error
+			background-color: #FFE6E6
+			border-color: #E74E40 !important
+			color: #E74E40
+
+			~ .default-input__error
+				opacity: 1
+
+
+		&--error:not(:valid), &.error:not(:valid), &.forms__input_error:not(:valid)
+			border-color: #E74E40
+
+			~ .default-input__error
+				opacity: 1
+
+			&:focus
+
+				~ .default-input__error
+					opacity: 0
+
+
+
+
+
+		&--file
+			position: absolute 
+			top: 0 
+			left: 0
+			opacity: 0
+			size: 1px 
+			overflow: hidden
+			pointer-events: none
+
+			~ .default-input__label
+				position: static !important
+				transform: none !important
+				pointer-events: all !important
+				cursor: pointer
+
+	&__label
+		margin-bottom: 10px
+
+		&--file
+			position: relative
+			display: flex
+			align-items: center
+
+
+			&:before
+				content: ""
+				display: inline-block
+				size: 100% 51px
+				flex: none
+				border: 1px solid var(--second-color)
+				transition: background .3s ease
+				// background-image: url("../img/ico-file.svg") 
+				background-position: right 10px center 
+				background-repeat: no-repeat
+				background-color: var(--second-color)
+				position: absolute
+				right: 0
+				bottom: 0
+				cursor: pointer
+				z-index: 1
+
+
+			~ .default-input__error
+				top: auto
+				bottom: 0
