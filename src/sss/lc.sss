@@ -63,6 +63,35 @@
 				+ .forms__label
 					top: -20px
 
+.lk-back-link
+	display: inline-block
+	background-color: var(--mainColor)
+	padding: 15px 25px
+	color: #fff
+	border: 1px solid var(--mainColor)
+	transition: background .3s ease, color .3s ease
+
+	&:hover
+		background-color: #fff
+
+
+.lc-table__item--unread-messages
+
+	.order-number.title
+		padding-left: 20px
+		position: relative
+
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			left: 0
+			top: calc(50% - 3px)
+			size: 6px
+			border-radius: 50%
+			background-color: var(--mainColor)
+
+
 .lc-info-top
 	.lc-info-item
 		select
@@ -194,6 +223,11 @@
 				color: #fff
 
 
+@media (max-width: 1200px)
+	
+	.lk-back-link
+		margin-bottom: 20px
+		
 @media (max-width: 1000px)
 	
 	.page-lk-
