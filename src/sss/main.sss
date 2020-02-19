@@ -39,6 +39,20 @@
 
 @import "_footer.sss"
 
+body[class*="page-lk-"]
+	.bread-crumbs ul
+		justify-content: flex-start
+
+	.title-block__cont
+		padding: 0 0 80px
+		margin: 0
+
+	.title-block__title
+		text-align: left
+
+		&:after
+			display: none
+
 
 .chat-footer
 	flex-wrap: wrap
@@ -548,6 +562,10 @@ a
 
 	.top__links a
 		font-size: 1.2rem
+
+	body[class*="page-lk-"]
+		.title-block__cont
+			padding: 25px 0
 
 
 
