@@ -1,3 +1,37 @@
+.lc
+	.aside
+		flex: none
+
+	&__top
+		flex-wrap: wrap
+
+		.lc-select-cont
+			width: 100%
+			margin-bottom: 30px
+
+			.lc-select
+				display: flex
+				align-items: flex-end
+
+			.lc-input
+				input
+					border: 0
+					box-shadow: none
+					padding: 0 17px
+					background-color: #F8F8FA
+					height: 50px
+					position: relative
+					width: 100%
+
+@supports (display: grid)
+
+	.lc-select-cont
+		form
+			display: grid
+			grid-template-columns: repeat(5, 1fr)
+			gap: 30px
+
+
 .lc-info-item
 	select
 		background-color: #fff
@@ -235,6 +269,17 @@
 				background-color: var(--mainColor)
 				color: #fff
 
+@media (max-width: 1500px)
+
+	@supports (display: grid)
+		.lc-select-cont
+
+			.lc-select
+				select
+					width: 100%
+
+			form
+				grid-template-columns: repeat(3, 1fr)
 
 @media (max-width: 1200px)
 	
@@ -258,6 +303,15 @@
 			fill: #fff
 			
 @media (max-width: 660px)
+
+	@supports (display: grid)
+		.lc-select-cont
+			form
+				grid-template-columns: 1fr
+
+	.lc-select select
+		background: url('../img/ico-select.svg') no-repeat 92% center #F8F8FA !important
+
 	
 	.page-lk-
 		
