@@ -43,6 +43,7 @@
     "imagemin-pngquant": "^6.0.1",
     "is_js": "^0.9.0",
     "jquery": "^3.4.0",
+    "js-cookie": "^2.2.1",
     "postcss": "^6.0.23",
     "postcss-assets": "^5.0.0",
     "postcss-attribute-case-insensitive": "^3.0.1",

@@ -5,6 +5,7 @@ import "selectize/dist/js/selectize.min.js";
 // import "animejs/anime.js";
 import Swiper from "swiper/dist/js/swiper.esm.js";
 import "./main-sliders.js";
+import "./popup-stocks.js";
 // import "./countTo.js";
 // import "./team.js";
 // import "./timeline.js";
@@ -14,9 +15,11 @@ import "./main-sliders.js";
 // import "./lc.js";
 // import mobileMenu from "./mobile-menu.js";
 import Sticky from "./x-widgets.js";
+import Cookies from "js-cookie";
 
 window.$ = $;
 window.jQuery = $;
+window.Cookies = Cookies;
 
 
 require("./slick.min.js");

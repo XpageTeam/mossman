@@ -137,7 +137,7 @@ gulp.task("deploy:img", () =>
 
 gulp.task("deploy:dist", _ => 
 	gulp.src("dist/**/*.*", {buffer: false})
-		.pipe(xpager_conn.dest(xpager_path))
+		.pipe(xpager_conn.dest(connectionSettings.xpager.dirName))
 );
 
 gulp.task("deploy", gulp.series(gulp.parallel("postcss", "pug", "imagemin"), "deploy:dist"));
@@ -166,7 +166,7 @@ gulp.task("deploy:zip", () =>
 			"!*.zip"
 			])
 		.pipe($.zip("app.zip"))
-		.pipe(xpager_conn.dest(xpager_path))
+		.pipe(xpager_conn.dest(connectionSettings.xpager.dirName))
 );
 
 gulp.task("deploy-to-server", gulp.series(gulp.parallel("postcss", "pug", "imagemin"), gulp.parallel(local, watch)));
