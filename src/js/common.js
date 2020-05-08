@@ -5,7 +5,7 @@ import "selectize/dist/js/selectize.min.js";
 // import "animejs/anime.js";
 import Swiper from "swiper/dist/js/swiper.esm.js";
 import "./main-sliders.js";
-import "./popup-stocks.js";
+// import "./popup-stocks.js";
 // import "./countTo.js";
 // import "./team.js";
 // import "./timeline.js";
